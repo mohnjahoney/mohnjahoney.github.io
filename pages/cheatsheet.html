@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="John Mahoney, DATA SCIENTIST | APPLIED MATHEMATICIAN">
+
+        <link rel="alternate"  href="https://mohnjahoney.git.io/feeds/all.atom.xml" type="application/atom+xml" title="John Mahoney Full Atom Feed"/>
+
+        <title>Cheatsheet // John Mahoney // DATA SCIENTIST | APPLIED MATHEMATICIAN</title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../theme/css/pure.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background: none repeat scroll 0% 0% #3D4F5D">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <img class="avatar" src="/images/me.jpg">
+                            <h1 class="brand-main"><a href="..">John Mahoney</a></h1>
+                            <p class="tagline">DATA SCIENTIST | APPLIED MATHEMATICIAN</p>
+                            <br>
+                                <p class="links"><a href="/pdfs/John_Mahoney_resume.pdf">Resume</a></p>
+                                <p class="links"><a href="/pages/projects.html">Projects</a></p>
+                                <p class="links"><a href="/archives.html">Archives</a></p>
+                                <p class="links"><a href="/categories.html">Categories</a></p>
+                                <p class="links"><a href="/tags.html">Tags</a></p>
+                                <p class="links"><a href="/sitemap.xml">Sitemap</a></p>
+                            <br>
+                                <p class="social">
+                                    <a href="https://www.linkedin.com/in/johnmahoney3/">
+                                        <i class="fa fa-linkedin fa-3x"></i>
+                                    </a>
+                                    <a href="https://github.com/mohnjahoney">
+                                        <i class="fa fa-github fa-3x"></i>
+                                    </a>
+                                </p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <h1 class="content-subhead">Cheatsheet</h1>
+            <p><body><hr/>
+<h3 id="first-is-the-markdown-input">First is the Markdown input.</h3>
+<h3 id="second-is-the-rendered-output">Second is the rendered output.</h3>
+<hr/>
+<h2 id="links">Links</h2>
+<p>Make intra-site links in Markdown format.</p>
+<hr/>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="err">[a link relative to the current file]({filename}../pages/article-template.md)</span>
+</code></pre></div>
+</td></tr></tbody></table>
+<p><a href="../pages/article-template.html">a link relative to the current file</a></p>
+<hr/>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="err">[a link relative to the content root]({filename}/pages/article-template.md)</span>
+</code></pre></div>
+</td></tr></tbody></table>
+<p><a href="../pages/article-template.html">a link relative to the content root</a></p>
+<hr/>
+<p>Need something like STATIC_PATHS = ['images', 'pdfs'] in pelican_conf.py</p>
+<hr/>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="err">[a link to a nonstandard subdirectory]({static}/pdfs/John_Mahoney_resume.pdf)</span>
+</code></pre></div>
+</td></tr></tbody></table>
+<p><a href="../pages/John_Mahoney_resume.pdf">a link to a nonstandard subdirectory</a></p>
+<hr/>
+<p>To control the size of an image, append the parameters in curly brackets.</p>
+<blockquote>
+<p>How to control the height and width together? 
+There appears to be an auto height in this theme that clobbers the one I set.</p>
+</blockquote>
+<hr/>
+<p>Set in pixels</p>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="err">!</span><span class="o">[</span><span class="n">smiley</span><span class="o">]</span><span class="p">(</span><span class="err">{</span><span class="k">static</span><span class="err">}</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">music_image</span><span class="p">.</span><span class="n">png</span><span class="p">)</span><span class="err">{</span><span class="n">height</span><span class="o">=</span><span class="mi">50</span><span class="w"> </span><span class="n">width</span><span class="o">=</span><span class="mi">50</span><span class="err">}</span><span class="w"></span>
+</code></pre></div>
+</td></tr></tbody></table>
+<p><img alt="smiley" class="img-fluid" height="50" src="../images/music_image.png" width="50"/></p>
+<hr/>
+<p>Set as a percent</p>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="err">!</span><span class="o">[</span><span class="n">smiley</span><span class="o">]</span><span class="p">(</span><span class="err">{</span><span class="k">static</span><span class="err">}</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">music_image</span><span class="p">.</span><span class="n">png</span><span class="p">)</span><span class="err">{</span><span class="n">height</span><span class="o">=</span><span class="mi">50</span><span class="o">%</span><span class="w"> </span><span class="n">width</span><span class="o">=</span><span class="mi">50</span><span class="o">%</span><span class="err">}</span><span class="w"></span>
+</code></pre></div>
+</td></tr></tbody></table>
+<p><img alt="smiley" class="img-fluid" height="50%" src="../images/music_image.png" width="50%"/></p>
+<hr/>
+<h2 id="code">Code</h2>
+<p>Use three colons followed by the language identifier.
+Start each line with 4 spaces.</p>
+<hr/>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="err">    :::python</span>
+<span class="err">    print("The triple-colon syntax will *not* show line numbers.")</span>
+</code></pre></div>
+</td></tr></tbody></table>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"The triple-colon syntax will *not* show line numbers."</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></tbody></table>
+<hr/>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="err">    #!python</span>
+<span class="err">    print("The path-less shebang syntax *will* show line numbers.")</span>
+</code></pre></div>
+</td></tr></tbody></table>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"The path-less shebang syntax *will* show line numbers."</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></tbody></table>
+<hr/>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="err">print("Another possibility is to use triple back-ticks to create a code-fence.")</span>
+</code></pre></div>
+</td></tr></tbody></table>
+<p>print("Another possibility is to use triple back-ticks to create a code-fence.")</p>
+<hr/></body></p>
+
+
+<footer class="footer">
+    <p>&copy; John Mahoney &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+
+</body>
+</html>

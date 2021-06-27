@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="John Mahoney, DATA SCIENTIST | APPLIED MATHEMATICIAN">
+
+        <link rel="alternate"  href="https://mohnjahoney.git.io/feeds/all.atom.xml" type="application/atom+xml" title="John Mahoney Full Atom Feed"/>
+
+        <title>Define Functions Iteratively With Python // John Mahoney // DATA SCIENTIST | APPLIED MATHEMATICIAN</title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./theme/css/pure.css">
+    <link rel="stylesheet" href="./theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background: none repeat scroll 0% 0% #3D4F5D">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <img class="avatar" src="/images/me.jpg">
+                            <h1 class="brand-main"><a href=".">John Mahoney</a></h1>
+                            <p class="tagline">DATA SCIENTIST | APPLIED MATHEMATICIAN</p>
+                            <br>
+                                <p class="links"><a href="/pdfs/John_Mahoney_resume.pdf">Resume</a></p>
+                                <p class="links"><a href="/pages/projects.html">Projects</a></p>
+                                <p class="links"><a href="/archives.html">Archives</a></p>
+                                <p class="links"><a href="/categories.html">Categories</a></p>
+                                <p class="links"><a href="/tags.html">Tags</a></p>
+                                <p class="links"><a href="/sitemap.xml">Sitemap</a></p>
+                            <br>
+                                <p class="social">
+                                    <a href="https://www.linkedin.com/in/johnmahoney3/">
+                                        <i class="fa fa-linkedin fa-3x"></i>
+                                    </a>
+                                    <a href="https://github.com/mohnjahoney">
+                                        <i class="fa fa-github fa-3x"></i>
+                                    </a>
+                                </p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Define Functions Iteratively With Python</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="./tag/python.html">python</a>
+                                <a class="post-category" href="./tag/software-development.html">software-development</a>
+                        </p>
+                </header>
+            </section>
+            <body><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>An interesting problem came up recently, there was a piece of code absolutely full of the same function calls over and over again, meaning if anything ever need to change, that would have to be changed in over 500 places, not ideal. Thoughts go back to single responsbility, and don't repeat yourself principles for software engineering. So research &amp; thinking begun on the best way to manage this issue. The first thing that came to mind, how could we define these functions and their combinations iteratively.</p>
+<p>Before we dive into this could be implemented, we need to really understand the problem.</p>
+<p>The use case for this repeated code, was to check the variables being passed to an endpoint were what they were expected to be. For example, if an endpoint is awaiting for a string, and an optional number, we want to check these before the operation goes through and potentially breaks something else down the line (bringing us back to the crash early principle).</p>
+<p>We'll start by defining two functions which will check that a variable is the type it's expected to be, and another to ensure it exists (not None in Python).</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [12]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">check_type</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">variable_type</span><span class="p">,</span> <span class="n">variable_name</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">!=</span> <span class="n">variable_type</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Variable '</span><span class="si">{</span><span class="n">variable_name</span><span class="si">}</span><span class="s2">' is invalid type! Expected: </span><span class="si">{</span><span class="n">variable_type</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">value</span>
+
+<span class="k">def</span> <span class="nf">check_exists</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="n">variable_name</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Variable '</span><span class="si">{</span><span class="n">variable_name</span><span class="si">}</span><span class="s2">' is None! Check variable exists."</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">value</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now that we've defined these functions, let's test that they work as expected and raise Exceptions when a problem statement comes up.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">check_type</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="nb">int</span><span class="p">,</span><span class="s1">'lucky_number'</span><span class="p">)</span>
+<span class="n">check_type</span><span class="p">(</span><span class="s1">'Hello world'</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="s1">'I thought this was a number'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre><span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">Exception</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-10-bb70c914c0df&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">      1</span> check_type<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">24</span><span class="ansi-yellow-intense-fg ansi-bold">,</span>int<span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-blue-intense-fg ansi-bold">'lucky_number'</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>check_type<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">'Hello world'</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> float<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">'I thought this was a number'</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-6-22c582f36d19&gt;</span> in <span class="ansi-cyan-fg">check_type</span><span class="ansi-blue-intense-fg ansi-bold">(value, variable_type, variable_name)</span>
+<span class="ansi-green-fg">      1</span> <span class="ansi-green-intense-fg ansi-bold">def</span> check_type<span class="ansi-yellow-intense-fg ansi-bold">(</span>value<span class="ansi-yellow-intense-fg ansi-bold">,</span> variable_type<span class="ansi-yellow-intense-fg ansi-bold">,</span> variable_name<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">      2</span>     <span class="ansi-green-intense-fg ansi-bold">if</span> type<span class="ansi-yellow-intense-fg ansi-bold">(</span>value<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">!=</span> variable_type<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 3</span><span class="ansi-yellow-intense-fg ansi-bold">         </span><span class="ansi-green-intense-fg ansi-bold">raise</span> Exception<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">f"Variable '{variable_name}' is invalid type! Expected: {variable_type}."</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">      4</span> 
+<span class="ansi-green-fg">      5</span> <span class="ansi-green-intense-fg ansi-bold">def</span> check_exists<span class="ansi-yellow-intense-fg ansi-bold">(</span>value<span class="ansi-yellow-intense-fg ansi-bold">,</span>variable_name<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+
+<span class="ansi-red-intense-fg ansi-bold">Exception</span>: Variable 'I thought this was a number' is invalid type! Expected: &lt;class 'float'&gt;.</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">55</span>
+<span class="n">y</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">check_exists</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="s1">'Fifty five'</span><span class="p">)</span>
+<span class="n">check_exists</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s1">'Fifty six'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre><span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">Exception</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-11-355540618803&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">      2</span> y <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-green-intense-fg ansi-bold">None</span>
+<span class="ansi-green-fg">      3</span> check_exists<span class="ansi-yellow-intense-fg ansi-bold">(</span>x<span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-blue-intense-fg ansi-bold">'Fifty five'</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 4</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>check_exists<span class="ansi-yellow-intense-fg ansi-bold">(</span>y<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">'Fifty six'</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-6-22c582f36d19&gt;</span> in <span class="ansi-cyan-fg">check_exists</span><span class="ansi-blue-intense-fg ansi-bold">(value, variable_name)</span>
+<span class="ansi-green-fg">      5</span> <span class="ansi-green-intense-fg ansi-bold">def</span> check_exists<span class="ansi-yellow-intense-fg ansi-bold">(</span>value<span class="ansi-yellow-intense-fg ansi-bold">,</span>variable_name<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">      6</span>     <span class="ansi-green-intense-fg ansi-bold">if</span> value <span class="ansi-green-intense-fg ansi-bold">is</span> <span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 7</span><span class="ansi-yellow-intense-fg ansi-bold">         </span><span class="ansi-green-intense-fg ansi-bold">raise</span> Exception<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">f"Variable '{variable_name}' is None! Check variable exists."</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">Exception</span>: Variable 'Fifty six' is None! Check variable exists.</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Defining-Functions-Iteratively">Defining Functions Iteratively<a class="anchor-link" href="#Defining-Functions-Iteratively">¶</a></h2><p>Now let's make use of the beauty that is looping to create all the combinations for us to use! We're going to encapsulate all these functions inside a dictionary to encapsulate them and provide a common interface for developers to use.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [140]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">log_and_raise</span><span class="p">(</span><span class="n">exception_text</span><span class="p">):</span>
+    <span class="c1"># Add logging here</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">exception_text</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">create_validators</span><span class="p">(</span><span class="n">types</span><span class="p">):</span>
+    <span class="n">validators</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">variable_type</span> <span class="ow">in</span> <span class="n">types</span><span class="p">:</span>
+        <span class="n">validators</span><span class="p">[</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">variable_type</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">"</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">value</span><span class="p">,</span> <span class="n">variable_type</span><span class="o">=</span><span class="n">variable_type</span><span class="p">:</span> <span class="n">value</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="n">variable_type</span> <span class="k">else</span> <span class="n">log_and_raise</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Variable isn't of type '</span><span class="si">{</span><span class="n">variable_type</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">'! D:"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">validators</span>
+
+<span class="n">validate</span> <span class="o">=</span> <span class="n">create_validators</span><span class="p">([</span><span class="nb">str</span><span class="p">,</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now in a handful lines of code, we've created a dictionary with a way to easily generate functions to check variable types, and then log out the error (eg, write to a file) and raise an exception.</p>
+<p>Before we deconstruct what's happening here, let's see it in action.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [141]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">validate</span><span class="p">[</span><span class="s1">'str'</span><span class="p">](</span><span class="s1">'This is a string!'</span><span class="p">)</span>
+
+<span class="n">validate</span><span class="p">[</span><span class="s1">'int'</span><span class="p">](</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="n">validate</span><span class="p">[</span><span class="s1">'float'</span><span class="p">](</span><span class="mf">42.42</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="s1">'The number forty two'</span>
+
+<span class="n">validate</span><span class="p">[</span><span class="s1">'str'</span><span class="p">](</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[141]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>'The number forty two'</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Fantastic, as we can see, it's not throwing any errors and continuing through our validations, now let's ensure our exception is raised (and subsequently any logging would be completed).</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [142]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">validate</span><span class="p">[</span><span class="s1">'str'</span><span class="p">](</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre><span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">Exception</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-142-fd464241a319&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>validate<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">'str'</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">42</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-140-4899cd219b78&gt;</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-intense-fg ansi-bold">(value, variable_type)</span>
+<span class="ansi-green-fg">      6</span>     validators <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-yellow-intense-fg ansi-bold">{</span><span class="ansi-yellow-intense-fg ansi-bold">}</span>
+<span class="ansi-green-fg">      7</span>     <span class="ansi-green-intense-fg ansi-bold">for</span> variable_type <span class="ansi-green-intense-fg ansi-bold">in</span> types<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 8</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>validators<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">f"{variable_type.__name__}"</span><span class="ansi-yellow-intense-fg ansi-bold">]</span> <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-green-intense-fg ansi-bold">lambda</span> value<span class="ansi-yellow-intense-fg ansi-bold">,</span> variable_type<span class="ansi-yellow-intense-fg ansi-bold">=</span>variable_type<span class="ansi-yellow-intense-fg ansi-bold">:</span> value <span class="ansi-green-intense-fg ansi-bold">if</span> type<span class="ansi-yellow-intense-fg ansi-bold">(</span>value<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">==</span> variable_type <span class="ansi-green-intense-fg ansi-bold">else</span> log_and_raise<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">f"Variable isn't of type '{variable_type.__name__}'! D:"</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">      9</span>     <span class="ansi-green-intense-fg ansi-bold">return</span> validators
+<span class="ansi-green-fg">     10</span> 
+
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-140-4899cd219b78&gt;</span> in <span class="ansi-cyan-fg">log_and_raise</span><span class="ansi-blue-intense-fg ansi-bold">(exception_text)</span>
+<span class="ansi-green-fg">      1</span> <span class="ansi-green-intense-fg ansi-bold">def</span> log_and_raise<span class="ansi-yellow-intense-fg ansi-bold">(</span>exception_text<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">      2</span>     <span class="ansi-red-intense-fg ansi-bold"># Add logging here</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 3</span><span class="ansi-yellow-intense-fg ansi-bold">     </span><span class="ansi-green-intense-fg ansi-bold">raise</span> Exception<span class="ansi-yellow-intense-fg ansi-bold">(</span>exception_text<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">      4</span> 
+<span class="ansi-green-fg">      5</span> <span class="ansi-green-intense-fg ansi-bold">def</span> create_validators<span class="ansi-yellow-intense-fg ansi-bold">(</span>types<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+
+<span class="ansi-red-intense-fg ansi-bold">Exception</span>: Variable isn't of type 'str'! D:</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Even better, we get raise an exception when our validation fails ensuring to alert the developers with information about why it failed. Now let's deconstruct how we created it in depth.</p>
+<h3 id="Deconstruction-of-How">Deconstruction of How<a class="anchor-link" href="#Deconstruction-of-How">¶</a></h3><p>Admittedly, there's a lot going on in those handful of lines which isn't obvious as to whats happening.</p>
+<p>First we define the overarching functions which contains the creation of all these functions, and thereafter initialise a dictionary to store all the following functions within. Next we loop over each of the types provided as a list to the function to create an entry in the dictionary using the <code>__name__</code> dunder function (eg, <code>str</code> has a dunder <code>__name__</code> of 'str'), this let's our developers use the type they want as the key of the dictionary when wanting to validate a variables type.</p>
+<h3 id="Lambdas!">Lambdas!<a class="anchor-link" href="#Lambdas!">¶</a></h3><p>The trickiest part here is how we are actually defining the functions. We make use of the lambda operator in Python to create <strong>anonymous functions</strong>. The structure of a lambda function definition follows:</p>
+<div class="highlight"><pre><span></span><span class="k">lambda</span> <span class="n">arguments</span><span class="p">:</span> <span class="n">true_statement</span> <span class="k">if</span> <span class="n">conditional_statement</span> <span class="k">else</span> <span class="n">false_statement</span>
+</pre></div>
+<p>We make use of a keyword argument of the <code>variable_type</code> in our loop otherwise the <code>variable_type</code> from the list passed in won't be correctly passed into the lambda function (which we won't discuss in this post).</p>
+<p>Finally we make use of an external function to centralise how we handle errors (making it easy to keep a consistent logging approach), and raise an Exception within that function to ensure any logging occurs before the program ultimately exits.</p>
+<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">¶</a></h2><p>There are pros and cons to this approach to this problem.</p>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>Concise way of creating lots of functions</li>
+<li>Consistent interface to use</li>
+<li>Stores all similar functions inside one object (dictionary)</li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>Not straightforward as to how it works</li>
+<li>Not straightforward to change functionality</li>
+</ul>
+</div>
+</div>
+</div></body>
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; John Mahoney &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+
+</body>
+</html>

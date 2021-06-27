@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mahoney - misc</title><link href="https://mohnjahoney.git.io/" rel="alternate"></link><link href="https://mohnjahoney.git.io/feeds/misc.atom.xml" rel="self"></link><id>https://mohnjahoney.git.io/</id><updated>2021-05-15T00:00:00-07:00</updated><subtitle>Data Scientist | Applied Mathematician</subtitle><entry><title>K-Nearest Neighbors</title><link href="https://mohnjahoney.git.io/k-nearest-neighbors.html" rel="alternate"></link><published>2021-05-15T00:00:00-07:00</published><updated>2021-05-15T00:00:00-07:00</updated><author><name>John Mahoney</name></author><id>tag:mohnjahoney.git.io,2021-05-15:/k-nearest-neighbors.html</id><summary type="html">&lt;body&gt;&lt;blockquote&gt;
+&lt;p&gt;“If it walks near &lt;code&gt;k&lt;/code&gt; other ducks, then it probably &lt;em&gt;is&lt;/em&gt; a duck.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="setup"&gt;Setup&lt;/h3&gt;
+&lt;p&gt;Imagine there is a lake with lots of birds hanging around: ducks, geese, cranes, herons, and so on.
+We can see each bird clearly enough to tell what type it is.&lt;/p&gt;
+&lt;h3 id="problem"&gt;Problem:&lt;/h3&gt;
+&lt;p&gt;Now imagine there is …&lt;/p&gt;&lt;/body&gt;</summary><content type="html">&lt;body&gt;&lt;blockquote&gt;
+&lt;p&gt;“If it walks near &lt;code&gt;k&lt;/code&gt; other ducks, then it probably &lt;em&gt;is&lt;/em&gt; a duck.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="setup"&gt;Setup&lt;/h3&gt;
+&lt;p&gt;Imagine there is a lake with lots of birds hanging around: ducks, geese, cranes, herons, and so on.
+We can see each bird clearly enough to tell what type it is.&lt;/p&gt;
+&lt;h3 id="problem"&gt;Problem:&lt;/h3&gt;
+&lt;p&gt;Now imagine there is one bird out there that we &lt;em&gt;can’t&lt;/em&gt; see well enough to identify its type.
+Maybe there is a bit of glare from the sun or something.&lt;/p&gt;
+&lt;p&gt;How might we guess the type of this bird?&lt;/p&gt;
+&lt;h3 id="solution"&gt;Solution:&lt;/h3&gt;
+&lt;p&gt;One way to do this is to assume that birds tend to hang around birds of the same type.
+So, we can look at the nearby birds (the “neighbors”), see what kind they are, and assume that our mystery bird's type is that of the most common neighbor.&lt;/p&gt;
+&lt;p&gt;And that's the k-Nearest Neighbors algorithm!&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;k&lt;/code&gt; in kNN is simply the number of nearby birds we should include in our decision.
+You can see that if we include just one neighbor, we might be subject to some sporadic errors.
+Alternatively if we let &lt;code&gt;k&lt;/code&gt; be equal to the total number of birds at the lake, then our guess would be the same no matter where the mystery bird is located - not very useful.&lt;/p&gt;
+&lt;p&gt;kNN can also be used to provide numeric rather than categorical output.&lt;/p&gt;
+&lt;p&gt;For example, we might want to guess the mystery bird's height.
+We would collect the height of each neighboring bird, and then simply take the average (or something similar) to get our prediction.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Supervised learning: We need to know the type (or size) of all birds except the bird of interest.&lt;/li&gt;
+&lt;li&gt;Potentially slow: Naive distance computations are.. well.. slow. There are ways to improve that.&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;</content><category term="misc"></category><category term="data science"></category></entry><entry><title>Design your own hexaflexagon</title><link href="https://mohnjahoney.git.io/hexaflexagon.html" rel="alternate"></link><published>2021-03-19T11:11:00-07:00</published><updated>2021-03-19T11:11:00-07:00</updated><author><name>John Mahoney</name></author><id>tag:mohnjahoney.git.io,2021-03-19:/hexaflexagon.html</id><summary type="html">&lt;body&gt;&lt;p&gt;Hexaflexagons are strange, paper creatures made of origami and a sprinkle of magic.&lt;/p&gt;
+&lt;p&gt;"But it looks like a hexagonal coaster for my coffee..", you say, "what's cool about that?"&lt;/p&gt;
+&lt;p&gt;What's cool is that this coaster has &lt;em&gt;three&lt;/em&gt; sides!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="flexagon" class="img-fluid" src="https://mohnjahoney.git.io/articles/2021/hexaflexagon/img/flexagon.gif"/&gt;&lt;/p&gt;
+&lt;p&gt;The nice image here is from &lt;a href="https://commons.wikimedia.org/wiki/File:Flexagon.gif"&gt;wikimedia&lt;/a&gt;.
+You will find that there …&lt;/p&gt;&lt;/body&gt;</summary><content type="html">&lt;body&gt;&lt;p&gt;Hexaflexagons are strange, paper creatures made of origami and a sprinkle of magic.&lt;/p&gt;
+&lt;p&gt;"But it looks like a hexagonal coaster for my coffee..", you say, "what's cool about that?"&lt;/p&gt;
+&lt;p&gt;What's cool is that this coaster has &lt;em&gt;three&lt;/em&gt; sides!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="flexagon" class="img-fluid" src="https://mohnjahoney.git.io/articles/2021/hexaflexagon/img/flexagon.gif"/&gt;&lt;/p&gt;
+&lt;p&gt;The nice image here is from &lt;a href="https://commons.wikimedia.org/wiki/File:Flexagon.gif"&gt;wikimedia&lt;/a&gt;.
+You will find that there are many great resources that discuss how to create these cool objects and also about the mathematics underneath.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Flexagon"&gt;Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.goodreads.com/book/show/415056.Hexaflexagons_and_Other_Mathematical_Diversions"&gt;Martin Gardner&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://vihart.com/hexaflexagons/"&gt;Vi Hart&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The designs on these versions are largely drawn by hand.
+Or if they are printed, they appear to be created in Photoshop or something.&lt;/p&gt;
+&lt;h2 id="make-a-custom-version"&gt;Make a &lt;em&gt;custom&lt;/em&gt; version!&lt;/h2&gt;
+&lt;p&gt;I wanted to make one where I could choose my own image for each of the three sides.
+And I wanted to make a tool for anyone else to do that too!&lt;/p&gt;
+&lt;p&gt;Go check it out!&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://editor.p5js.org/mohnjahoney/full/-fVgtBMTP"&gt;&lt;img alt="blah" class="img-fluid" src="https://mohnjahoney.git.io/articles/2021/hexaflexagon/img/HFGiconsmall.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I made this during COVID and was thinking about all of the kids stuck at home who needed neat projects to stimulate their minds.
+So it was important for me to make this eminently shareable.
+I used p5js (and its online editor) - a fun language and a cool tool.&lt;/p&gt;
+&lt;p&gt;Open the tool, drag in three images of your choice, rotate and scale them to suit your fancy, generate the composite image, download, print, cut out, and fold!&lt;/p&gt;
+&lt;p&gt;Here's an image to get you started.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://mohnjahoney.git.io/articles/2021/hexaflexagon/img/example_hexaflexagon.png"&gt;&lt;img alt="example" class="img-fluid" src="https://mohnjahoney.git.io/articles/2021/hexaflexagon/img/example_hexaflexagon_small.png"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can play with the code for the HFG tool &lt;a href="https://editor.p5js.org/mohnjahoney/sketches/-fVgtBMTP"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Please drop me a line if you had fun with this or come up with an interesting twist.&lt;/p&gt;&lt;/body&gt;</content><category term="misc"></category><category term="paper"></category><category term="coding"></category><category term="math"></category><category term="fun"></category><category term="p5js"></category></entry></feed>

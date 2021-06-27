@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="John Mahoney, DATA SCIENTIST | APPLIED MATHEMATICIAN">
+
+        <link rel="alternate"  href="https://mohnjahoney.git.io/feeds/all.atom.xml" type="application/atom+xml" title="John Mahoney Full Atom Feed"/>
+
+        <title>Remodeling website // John Mahoney // DATA SCIENTIST | APPLIED MATHEMATICIAN</title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./theme/css/pure.css">
+    <link rel="stylesheet" href="./theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background: none repeat scroll 0% 0% #3D4F5D">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <img class="avatar" src="/images/me.jpg">
+                            <h1 class="brand-main"><a href=".">John Mahoney</a></h1>
+                            <p class="tagline">DATA SCIENTIST | APPLIED MATHEMATICIAN</p>
+                            <br>
+                                <p class="links"><a href="/pdfs/John_Mahoney_resume.pdf">Resume</a></p>
+                                <p class="links"><a href="/pages/projects.html">Projects</a></p>
+                                <p class="links"><a href="/archives.html">Archives</a></p>
+                                <p class="links"><a href="/categories.html">Categories</a></p>
+                                <p class="links"><a href="/tags.html">Tags</a></p>
+                                <p class="links"><a href="/sitemap.xml">Sitemap</a></p>
+                            <br>
+                                <p class="social">
+                                    <a href="https://www.linkedin.com/in/johnmahoney3/">
+                                        <i class="fa fa-linkedin fa-3x"></i>
+                                    </a>
+                                    <a href="https://github.com/mohnjahoney">
+                                        <i class="fa fa-github fa-3x"></i>
+                                    </a>
+                                </p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Remodeling website</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="./tag/pelican.html">pelican</a>
+                                <a class="post-category" href="./tag/website.html">website</a>
+                        </p>
+                </header>
+            </section>
+            <body><p>This is my first post in the remodeled version of my website.</p>
+<p>I had a few goals in this remodel:</p>
+<ul>
+<li>Continue with pelican as a site generator</li>
+<li>Use jupyter notebooks as a content source</li>
+<li>Have a "nice" directory structure</li>
+<li>Host on GitHub</li>
+<li>Allow custom javascript for interactive demos</li>
+</ul>
+<p>While these targets seemed relatively modest, it took some doing even with the many resources available.
+Luckily, I found an existing site with many of these features. 
+<img alt="https://jackmckew.dev/" class="img-fluid" src="https://jackmckew.dev/"/>
+My goal then became to adapt Jack's website.</p>
+<p>I wanted to use a different theme and also strip some of what I thought was unnecessary.
+This was not trivial and not completely solved.
+Please steal my sourcecode from GH.</p>
+<p>I don't want to create a formal writeup here because things change quickly.
+But here are a few thoughts:</p>
+<ul>
+<li><code>pelican</code> has some nice features, but it is not clear to me that it is on a path toward long-term development and support. E.g. look at how recently plugins and such have been updated on GitHub. </li>
+<li>Related, I had hopes that various related packages would be well-functioning enough so that I could install them and not worry about versions. This appears to be not at all true. In fact, it seems like this might be more the norm. So get yourself a virtual environment and get used to it. I am using <code>venv</code> and my requirements file is in the source.</li>
+<li>Certain little things can be terribly frustrating. For example, sizing images in Markdown appears to be a big pain with many conflicting styles. Prepare for that. </li>
+<li><code>pelican</code> plugins used to be all on in one GH repo. Now it seems that things are moving toward separating them into separate but connected repos. Some versioning issues lurk there. Also it looks like some plugins are not better available as packages to install via pip, e.g. ghp-import.</li>
+<li>Github really falls down sometimes. For example, rendering jupyter notebooks is an issue that has plagued people for years. It's a wonder folks still use it in this way. (Do they? Am I the only one foolish enough to try?) It also seems that GH does some funny things w.r.t. hosting and updating your website. There are several times where the site did not render correctly and then fixed itself - something about the css not being found. Also, every time you push your new site to GH, it takes at least a minute or maybe 5 for it to appear live.</li>
+<li>File structure, articles, pages, categories, tags, menu building, internal site referencing, arg.. This is easy when it works and really painful to debug when it doesn't.</li>
+</ul></body>
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; John Mahoney &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+
+</body>
+</html>

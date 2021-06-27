@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="John Mahoney, DATA SCIENTIST | APPLIED MATHEMATICIAN">
+
+        <link rel="alternate"  href="https://mohnjahoney.git.io/feeds/all.atom.xml" type="application/atom+xml" title="John Mahoney Full Atom Feed"/>
+
+        <title>K-Nearest Neighbors // John Mahoney // DATA SCIENTIST | APPLIED MATHEMATICIAN</title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./theme/css/pure.css">
+    <link rel="stylesheet" href="./theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background: none repeat scroll 0% 0% #3D4F5D">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <img class="avatar" src="/images/me.jpg">
+                            <h1 class="brand-main"><a href=".">John Mahoney</a></h1>
+                            <p class="tagline">DATA SCIENTIST | APPLIED MATHEMATICIAN</p>
+                            <br>
+                                <p class="links"><a href="/pdfs/John_Mahoney_resume.pdf">Resume</a></p>
+                                <p class="links"><a href="/pages/projects.html">Projects</a></p>
+                                <p class="links"><a href="/archives.html">Archives</a></p>
+                                <p class="links"><a href="/categories.html">Categories</a></p>
+                                <p class="links"><a href="/tags.html">Tags</a></p>
+                                <p class="links"><a href="/sitemap.xml">Sitemap</a></p>
+                            <br>
+                                <p class="social">
+                                    <a href="https://www.linkedin.com/in/johnmahoney3/">
+                                        <i class="fa fa-linkedin fa-3x"></i>
+                                    </a>
+                                    <a href="https://github.com/mohnjahoney">
+                                        <i class="fa fa-github fa-3x"></i>
+                                    </a>
+                                </p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>K-Nearest Neighbors</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="./tag/data-science.html">data science</a>
+                        </p>
+                </header>
+            </section>
+            <body><blockquote>
+<p>“If it walks near <code>k</code> other ducks, then it probably <em>is</em> a duck.”</p>
+</blockquote>
+<h3 id="setup">Setup</h3>
+<p>Imagine there is a lake with lots of birds hanging around: ducks, geese, cranes, herons, and so on.
+We can see each bird clearly enough to tell what type it is.</p>
+<h3 id="problem">Problem:</h3>
+<p>Now imagine there is one bird out there that we <em>can’t</em> see well enough to identify its type.
+Maybe there is a bit of glare from the sun or something.</p>
+<p>How might we guess the type of this bird?</p>
+<h3 id="solution">Solution:</h3>
+<p>One way to do this is to assume that birds tend to hang around birds of the same type.
+So, we can look at the nearby birds (the “neighbors”), see what kind they are, and assume that our mystery bird's type is that of the most common neighbor.</p>
+<p>And that's the k-Nearest Neighbors algorithm!</p>
+<p>The <code>k</code> in kNN is simply the number of nearby birds we should include in our decision.
+You can see that if we include just one neighbor, we might be subject to some sporadic errors.
+Alternatively if we let <code>k</code> be equal to the total number of birds at the lake, then our guess would be the same no matter where the mystery bird is located - not very useful.</p>
+<p>kNN can also be used to provide numeric rather than categorical output.</p>
+<p>For example, we might want to guess the mystery bird's height.
+We would collect the height of each neighboring bird, and then simply take the average (or something similar) to get our prediction.</p>
+<ul>
+<li>Supervised learning: We need to know the type (or size) of all birds except the bird of interest.</li>
+<li>Potentially slow: Naive distance computations are.. well.. slow. There are ways to improve that.</li>
+</ul></body>
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; John Mahoney &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+
+</body>
+</html>

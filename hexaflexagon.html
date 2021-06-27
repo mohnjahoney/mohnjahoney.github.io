@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="John Mahoney, DATA SCIENTIST | APPLIED MATHEMATICIAN">
+
+        <link rel="alternate"  href="https://mohnjahoney.git.io/feeds/all.atom.xml" type="application/atom+xml" title="John Mahoney Full Atom Feed"/>
+
+        <title>Design your own hexaflexagon // John Mahoney // DATA SCIENTIST | APPLIED MATHEMATICIAN</title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./theme/css/pure.css">
+    <link rel="stylesheet" href="./theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background: none repeat scroll 0% 0% #3D4F5D">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <img class="avatar" src="/images/me.jpg">
+                            <h1 class="brand-main"><a href=".">John Mahoney</a></h1>
+                            <p class="tagline">DATA SCIENTIST | APPLIED MATHEMATICIAN</p>
+                            <br>
+                                <p class="links"><a href="/pdfs/John_Mahoney_resume.pdf">Resume</a></p>
+                                <p class="links"><a href="/pages/projects.html">Projects</a></p>
+                                <p class="links"><a href="/archives.html">Archives</a></p>
+                                <p class="links"><a href="/categories.html">Categories</a></p>
+                                <p class="links"><a href="/tags.html">Tags</a></p>
+                                <p class="links"><a href="/sitemap.xml">Sitemap</a></p>
+                            <br>
+                                <p class="social">
+                                    <a href="https://www.linkedin.com/in/johnmahoney3/">
+                                        <i class="fa fa-linkedin fa-3x"></i>
+                                    </a>
+                                    <a href="https://github.com/mohnjahoney">
+                                        <i class="fa fa-github fa-3x"></i>
+                                    </a>
+                                </p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Design your own hexaflexagon</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="./tag/paper.html">paper</a>
+                                <a class="post-category" href="./tag/coding.html">coding</a>
+                                <a class="post-category" href="./tag/math.html">math</a>
+                                <a class="post-category" href="./tag/fun.html">fun</a>
+                                <a class="post-category" href="./tag/p5js.html">p5js</a>
+                        </p>
+                </header>
+            </section>
+            <body><p>Hexaflexagons are strange, paper creatures made of origami and a sprinkle of magic.</p>
+<p>"But it looks like a hexagonal coaster for my coffee..", you say, "what's cool about that?"</p>
+<p>What's cool is that this coaster has <em>three</em> sides!</p>
+<p><img alt="flexagon" class="img-fluid" src="./articles/2021/hexaflexagon/img/flexagon.gif"/></p>
+<p>The nice image here is from <a href="https://commons.wikimedia.org/wiki/File:Flexagon.gif">wikimedia</a>.
+You will find that there are many great resources that discuss how to create these cool objects and also about the mathematics underneath.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Flexagon">Wiki</a></li>
+<li><a href="https://www.goodreads.com/book/show/415056.Hexaflexagons_and_Other_Mathematical_Diversions">Martin Gardner</a></li>
+<li><a href="http://vihart.com/hexaflexagons/">Vi Hart</a></li>
+</ul>
+<p>The designs on these versions are largely drawn by hand.
+Or if they are printed, they appear to be created in Photoshop or something.</p>
+<h2 id="make-a-custom-version">Make a <em>custom</em> version!</h2>
+<p>I wanted to make one where I could choose my own image for each of the three sides.
+And I wanted to make a tool for anyone else to do that too!</p>
+<p>Go check it out!</p>
+<p><a href="https://editor.p5js.org/mohnjahoney/full/-fVgtBMTP"><img alt="blah" class="img-fluid" src="./articles/2021/hexaflexagon/img/HFGiconsmall.png"/></a></p>
+<p>I made this during COVID and was thinking about all of the kids stuck at home who needed neat projects to stimulate their minds.
+So it was important for me to make this eminently shareable.
+I used p5js (and its online editor) - a fun language and a cool tool.</p>
+<p>Open the tool, drag in three images of your choice, rotate and scale them to suit your fancy, generate the composite image, download, print, cut out, and fold!</p>
+<p>Here's an image to get you started.</p>
+<p><a href="./articles/2021/hexaflexagon/img/example_hexaflexagon.png"><img alt="example" class="img-fluid" src="./articles/2021/hexaflexagon/img/example_hexaflexagon_small.png"/></a></p>
+<p>You can play with the code for the HFG tool <a href="https://editor.p5js.org/mohnjahoney/sketches/-fVgtBMTP">here</a>.</p>
+<p>Please drop me a line if you had fun with this or come up with an interesting twist.</p></body>
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
+    <p>&copy; John Mahoney &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+
+</body>
+</html>

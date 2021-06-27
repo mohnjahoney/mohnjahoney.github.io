@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="John Mahoney, DATA SCIENTIST | APPLIED MATHEMATICIAN">
+
+        <link rel="alternate"  href="https://mohnjahoney.git.io/feeds/all.atom.xml" type="application/atom+xml" title="John Mahoney Full Atom Feed"/>
+
+        <title>About this site // John Mahoney // DATA SCIENTIST | APPLIED MATHEMATICIAN</title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../theme/css/pure.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background: none repeat scroll 0% 0% #3D4F5D">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <img class="avatar" src="/images/me.jpg">
+                            <h1 class="brand-main"><a href="..">John Mahoney</a></h1>
+                            <p class="tagline">DATA SCIENTIST | APPLIED MATHEMATICIAN</p>
+                            <br>
+                                <p class="links"><a href="/pdfs/John_Mahoney_resume.pdf">Resume</a></p>
+                                <p class="links"><a href="/pages/projects.html">Projects</a></p>
+                                <p class="links"><a href="/archives.html">Archives</a></p>
+                                <p class="links"><a href="/categories.html">Categories</a></p>
+                                <p class="links"><a href="/tags.html">Tags</a></p>
+                                <p class="links"><a href="/sitemap.xml">Sitemap</a></p>
+                            <br>
+                                <p class="social">
+                                    <a href="https://www.linkedin.com/in/johnmahoney3/">
+                                        <i class="fa fa-linkedin fa-3x"></i>
+                                    </a>
+                                    <a href="https://github.com/mohnjahoney">
+                                        <i class="fa fa-github fa-3x"></i>
+                                    </a>
+                                </p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <h1 class="content-subhead">About this site</h1>
+            <p><body><p>I want to share the basic ideas behind how to <em>create</em>, <em>share</em>, and <em>maintain</em> this website.</p>
+<p>You can find the python source code for this website 
+<a href="https://github.com/mohnjahoney/website_source">here</a>.
+I hope you find something useful!</p>
+<h1 id="overview">Overview</h1>
+<h2 id="heres-the-basic-idea">Here's the basic idea:</h2>
+<ul>
+<li>Write files in Markdown (basically human readable) locally.</li>
+<li>Use python package <code>pelican</code> to compile this into a website (HTML)</li>
+<li>Push the HTML to GitHub (in a way where GH agrees to serve your website)</li>
+</ul>
+<h2 id="whats-nice">What's nice?</h2>
+<ul>
+<li>You write in Markdown rather than HTML. This is a plus for me.</li>
+<li>You can make use of various themes developed for <code>pelican</code> so that you can input the same content, but get differently styled webpages.</li>
+<li>If you move to another system (e.g., Jekyll or Hugo) the process appears to be relatively painless because the content is pretty well separated from the style.</li>
+<li>Hosting is easy and free.</li>
+</ul>
+<h2 id="whats-not-so-nice">What's not so nice?</h2>
+<ul>
+<li>Markdown has some limitations and you sometimes end up having to write HTML yourself. Sometimes I think I waste more time trying to coax the Markdown than I would have just writing HTML.</li>
+<li>The themes seem to have their own quirks and requirements so that switching themes is not as effortless as you might desire.</li>
+<li>Plugins and related packages change ways such that the ecosystem seems somewhat fragile. I don't know if this is a sign that pelican is losing momentum or what..</li>
+</ul>
+<h1 id="more-details">More details</h1>
+<h2 id="how-to-create-this-website">How to <em>create</em> this website?</h2>
+<p>This website is created using the Python package <code>pelican</code>.
+You can install this with,</p>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pip install pelican
+</code></pre></div>
+</td></tr></tbody></table>
+<p>There are a few other dependencies you may need to also install with pip like <code>Markdown</code>.</p>
+<p>I didn't begin this process using virtual environments, but I do now and certainly recommend it.
+The upshot is that you choose particular packages (and versions) that you want to use with this website.
+These choices can differ from what you have running at large on your machine (or what you use in other virtual environments for other projects).
+You specify these in the <code>requirements.txt</code> file.
+Whenever you recompile the site, you do this from within the virtual environment.
+I use <code>venv</code> where activation looks like this:</p>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">source</span> env/bin/activate
+</code></pre></div>
+</td></tr></tbody></table>
+<p>The site content is written in the Markdown language (easier to write than HTML and more limited).
+Then pelican, along with a pelican theme, compiles the content into a website.
+This is done by running,</p>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>make html
+</code></pre></div>
+</td></tr></tbody></table>
+<p>The website is written to a directory named <code>output</code>.</p>
+<p>You can then view this website locally by running,</p>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>make serve
+</code></pre></div>
+</td></tr></tbody></table>
+<p>and pointing your browser to <code>http://localhost:8000/</code>, or <code>http://127.0.0.1:8000/</code>.
+This is a chance to see how things will look before committing your changes.</p>
+<h2 id="how-to-share-this-website">How to <em>share</em> this website?</h2>
+<p>There are various options for how to share the website.
+I chose to host it on Github.
+This was fairly straightforward.</p>
+<p>Turn the <code>output</code> directory into a local git repository by running,</p>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">cd</span> output
+git init
+</code></pre></div>
+</td></tr></tbody></table>
+<p>Create a repository on Github named <code>yourusername.github.io</code> and push your local <code>output</code> repository here.</p>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>git commit -am <span class="s2">"first commit"</span>
+git remote add origin https://github.com/yourusername/repo_name.git
+git push origin master
+</code></pre></div>
+</td></tr></tbody></table>
+<p>Your website will then be hosted at <code>yourusername.github.io</code>.
+Note: it can take a few minutes for pushed changes to be reflected on the website.</p>
+<p>Note: compiling the website clobbers the existing output directory. So you have to set up the git process from the beginning each time.
+I wrote a simple script <code>mypublish.sh</code> (in the source) that I use to accomplish this.</p>
+<h2 id="how-to-maintain-the-website">How to <em>maintain</em> the website?</h2>
+<p>For starters, you'll want to turn your website source into a git repo.
+And likely push it to GH too.</p>
+<p>It is recommended to set up an appropriate <code>.gitignore</code> file.</p>
+<p>The basic flow:</p>
+<ul>
+<li>
+<p>Make some change locally. E.g., write a new article.</p>
+</li>
+<li>
+<p>Check out the effect. Compile the website and serve it locally and view <code>http://localhost:8000/</code>,</p>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>make html
+make serve
+</code></pre></div>
+</td></tr></tbody></table>
+</li>
+<li>
+<p>Push changes to GitHub - remember that you have source <em>and</em> website repo.</p>
+<table class="highlighttable table-striped table"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>git add content/insightful_article.md
+git commit -am <span class="s2">"added yet another insightful article"</span>
+git push
+
+./mypublish.sh
+</code></pre></div>
+</td></tr></tbody></table>
+</li>
+</ul>
+<p>Related resources I found useful:
+- https://appliedcaffeine.org/navbaritems.html</p></body></p>
+
+
+<footer class="footer">
+    <p>&copy; John Mahoney &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+
+</body>
+</html>

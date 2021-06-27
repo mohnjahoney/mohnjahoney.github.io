@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Mahoney - pelican</title><link href="https://mohnjahoney.git.io/" rel="alternate"></link><link href="https://mohnjahoney.git.io/feeds/pelican.atom.xml" rel="self"></link><id>https://mohnjahoney.git.io/</id><updated>2021-06-22T00:00:00-07:00</updated><subtitle>Data Scientist | Applied Mathematician</subtitle><entry><title>Remodeling website</title><link href="https://mohnjahoney.git.io/remodeling-website.html" rel="alternate"></link><published>2021-06-22T00:00:00-07:00</published><updated>2021-06-22T00:00:00-07:00</updated><author><name>John Mahoney</name></author><id>tag:mohnjahoney.git.io,2021-06-22:/remodeling-website.html</id><summary type="html">&lt;body&gt;&lt;p&gt;This is my first post in the remodeled version of my website.&lt;/p&gt;
+&lt;p&gt;I had a few goals in this remodel:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Continue with pelican as a site generator&lt;/li&gt;
+&lt;li&gt;Use jupyter notebooks as a content source&lt;/li&gt;
+&lt;li&gt;Have a "nice" directory structure&lt;/li&gt;
+&lt;li&gt;Host on GitHub&lt;/li&gt;
+&lt;li&gt;Allow custom javascript for interactive demos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While these …&lt;/p&gt;&lt;/body&gt;</summary><content type="html">&lt;body&gt;&lt;p&gt;This is my first post in the remodeled version of my website.&lt;/p&gt;
+&lt;p&gt;I had a few goals in this remodel:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Continue with pelican as a site generator&lt;/li&gt;
+&lt;li&gt;Use jupyter notebooks as a content source&lt;/li&gt;
+&lt;li&gt;Have a "nice" directory structure&lt;/li&gt;
+&lt;li&gt;Host on GitHub&lt;/li&gt;
+&lt;li&gt;Allow custom javascript for interactive demos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While these targets seemed relatively modest, it took some doing even with the many resources available.
+Luckily, I found an existing site with many of these features. 
+&lt;img alt="https://jackmckew.dev/" class="img-fluid" src="https://jackmckew.dev/"/&gt;
+My goal then became to adapt Jack's website.&lt;/p&gt;
+&lt;p&gt;I wanted to use a different theme and also strip some of what I thought was unnecessary.
+This was not trivial and not completely solved.
+Please steal my sourcecode from GH.&lt;/p&gt;
+&lt;p&gt;I don't want to create a formal writeup here because things change quickly.
+But here are a few thoughts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pelican&lt;/code&gt; has some nice features, but it is not clear to me that it is on a path toward long-term development and support. E.g. look at how recently plugins and such have been updated on GitHub. &lt;/li&gt;
+&lt;li&gt;Related, I had hopes that various related packages would be well-functioning enough so that I could install them and not worry about versions. This appears to be not at all true. In fact, it seems like this might be more the norm. So get yourself a virtual environment and get used to it. I am using &lt;code&gt;venv&lt;/code&gt; and my requirements file is in the source.&lt;/li&gt;
+&lt;li&gt;Certain little things can be terribly frustrating. For example, sizing images in Markdown appears to be a big pain with many conflicting styles. Prepare for that. &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pelican&lt;/code&gt; plugins used to be all on in one GH repo. Now it seems that things are moving toward separating them into separate but connected repos. Some versioning issues lurk there. Also it looks like some plugins are not better available as packages to install via pip, e.g. ghp-import.&lt;/li&gt;
+&lt;li&gt;Github really falls down sometimes. For example, rendering jupyter notebooks is an issue that has plagued people for years. It's a wonder folks still use it in this way. (Do they? Am I the only one foolish enough to try?) It also seems that GH does some funny things w.r.t. hosting and updating your website. There are several times where the site did not render correctly and then fixed itself - something about the css not being found. Also, every time you push your new site to GH, it takes at least a minute or maybe 5 for it to appear live.&lt;/li&gt;
+&lt;li&gt;File structure, articles, pages, categories, tags, menu building, internal site referencing, arg.. This is easy when it works and really painful to debug when it doesn't.&lt;/li&gt;
+&lt;/ul&gt;&lt;/body&gt;</content><category term="pelican"></category><category term="pelican"></category><category term="website"></category></entry></feed>

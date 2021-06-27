@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>John Mahoney - John Mahoney</title><link>https://mohnjahoney.git.io/</link><description>Data Scientist | Applied Mathematician</description><lastBuildDate>Tue, 22 Jun 2021 00:00:00 -0700</lastBuildDate><item><title>Remodeling website</title><link>https://mohnjahoney.git.io/remodeling-website.html</link><description>&lt;body&gt;&lt;p&gt;This is my first post in the remodeled version of my website.&lt;/p&gt;
+&lt;p&gt;I had a few goals in this remodel:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Continue with pelican as a site generator&lt;/li&gt;
+&lt;li&gt;Use jupyter notebooks as a content source&lt;/li&gt;
+&lt;li&gt;Have a "nice" directory structure&lt;/li&gt;
+&lt;li&gt;Host on GitHub&lt;/li&gt;
+&lt;li&gt;Allow custom javascript for interactive demos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While these …&lt;/p&gt;&lt;/body&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">John Mahoney</dc:creator><pubDate>Tue, 22 Jun 2021 00:00:00 -0700</pubDate><guid isPermaLink="false">tag:mohnjahoney.git.io,2021-06-22:/remodeling-website.html</guid><category>pelican</category><category>pelican</category><category>website</category></item><item><title>K-Nearest Neighbors</title><link>https://mohnjahoney.git.io/k-nearest-neighbors.html</link><description>&lt;body&gt;&lt;blockquote&gt;
+&lt;p&gt;“If it walks near &lt;code&gt;k&lt;/code&gt; other ducks, then it probably &lt;em&gt;is&lt;/em&gt; a duck.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="setup"&gt;Setup&lt;/h3&gt;
+&lt;p&gt;Imagine there is a lake with lots of birds hanging around: ducks, geese, cranes, herons, and so on.
+We can see each bird clearly enough to tell what type it is.&lt;/p&gt;
+&lt;h3 id="problem"&gt;Problem:&lt;/h3&gt;
+&lt;p&gt;Now imagine there is …&lt;/p&gt;&lt;/body&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">John Mahoney</dc:creator><pubDate>Sat, 15 May 2021 00:00:00 -0700</pubDate><guid isPermaLink="false">tag:mohnjahoney.git.io,2021-05-15:/k-nearest-neighbors.html</guid><category>misc</category><category>data science</category></item><item><title>Design your own hexaflexagon</title><link>https://mohnjahoney.git.io/hexaflexagon.html</link><description>&lt;body&gt;&lt;p&gt;Hexaflexagons are strange, paper creatures made of origami and a sprinkle of magic.&lt;/p&gt;
+&lt;p&gt;"But it looks like a hexagonal coaster for my coffee..", you say, "what's cool about that?"&lt;/p&gt;
+&lt;p&gt;What's cool is that this coaster has &lt;em&gt;three&lt;/em&gt; sides!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="flexagon" class="img-fluid" src="https://mohnjahoney.git.io/articles/2021/hexaflexagon/img/flexagon.gif"/&gt;&lt;/p&gt;
+&lt;p&gt;The nice image here is from &lt;a href="https://commons.wikimedia.org/wiki/File:Flexagon.gif"&gt;wikimedia&lt;/a&gt;.
+You will find that there …&lt;/p&gt;&lt;/body&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">John Mahoney</dc:creator><pubDate>Fri, 19 Mar 2021 11:11:00 -0700</pubDate><guid isPermaLink="false">tag:mohnjahoney.git.io,2021-03-19:/hexaflexagon.html</guid><category>misc</category><category>paper</category><category>coding</category><category>math</category><category>fun</category><category>p5js</category></item><item><title>Notebook template</title><link>https://mohnjahoney.git.io/notebook-template.html</link><description>&lt;body&gt;&lt;h3 id="notes"&gt;Notes:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\LaTeX\)&lt;/span&gt;: It renders correctly from the markdown file. The &lt;span class="math"&gt;\(\LaTeX\)&lt;/span&gt; within the notebook markdown cells renders the equations, but not the inline math. TODO: fix this&lt;/li&gt;
+&lt;li&gt;When you reference a single cell, you can't say cells[4], you have to write cells[4:5].&lt;/li&gt;
+&lt;li&gt;The numbers in cells[m …&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">John Mahoney</dc:creator><pubDate>Fri, 01 Jan 2021 00:00:00 -0800</pubDate><guid isPermaLink="false">tag:mohnjahoney.git.io,2021-01-01:/notebook-template.html</guid><category>python</category><category>python</category><category>jupyter notebook</category><category>template</category><category>website</category></item><item><title>Define Functions Iteratively With Python</title><link>https://mohnjahoney.git.io/define-functions-iteratively-with-python.html</link><description>&lt;body&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;An interesting problem came up recently, there was a piece of code absolutely full of the same function calls over and over again, meaning if anything ever need to change, that would have to be changed in over 500 places, not ideal. Thoughts go back to single responsbility, and don't …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">John Mahoney</dc:creator><pubDate>Wed, 12 Feb 2020 00:00:00 -0800</pubDate><guid isPermaLink="false">tag:mohnjahoney.git.io,2020-02-12:/define-functions-iteratively-with-python.html</guid><category>python</category><category>python</category><category>software-development</category></item></channel></rss>
