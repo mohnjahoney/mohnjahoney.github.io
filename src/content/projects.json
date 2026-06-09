@@ -1,0 +1,36 @@
+[
+  {
+    "slug": "example-one",
+    "title": "Example One",
+    "description": "A short one-sentence description of the project.",
+    "status": "active",
+    "categories": ["Useful Tools", "Data Science & Visualization"],
+    "thumbnail": "/projects/example-one/thumbnail.svg",
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/yourhandle/example-one" }
+    ],
+    "hasDetailPage": true
+  },
+  {
+    "slug": "example-two",
+    "title": "Example Two",
+    "description": "An experiment with a single screenshot and a short writeup.",
+    "status": "prototype",
+    "categories": ["Experimental / Artistic", "Music & Computation"],
+    "thumbnail": "/projects/example-two/thumbnail.svg",
+    "links": [],
+    "hasDetailPage": true
+  },
+  {
+    "slug": "example-three",
+    "title": "Example Three",
+    "description": "A finished thing that links straight out to an external page.",
+    "status": "finished",
+    "categories": ["Silly / Weird"],
+    "thumbnail": "/projects/example-three/thumbnail.svg",
+    "links": [
+      { "label": "Visit site", "url": "https://example.com" }
+    ],
+    "hasDetailPage": false
+  }
+]
