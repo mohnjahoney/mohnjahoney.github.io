@@ -1,7 +1,7 @@
 // Edit this file to update your name, bio, and external links.
 export const site = {
   name: "Your Name",
-  photo: "/profile-photo.jpg",
+  photo: "/profile-photo.svg",
   intro:
     "Short two- or three-sentence introduction. Say who you are and what you care about. Keep it human.",
   interests: [
