@@ -1,14 +1,11 @@
 import type { ReactNode } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { site } from "../content/site";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="page">
       <header className="site-header">
-        <Link to="/" className="brand">
-          {site.name}
-        </Link>
         <nav className="site-nav">
           <NavLink to="/" end>
             Home
@@ -21,7 +18,9 @@ export default function Layout({ children }: { children: ReactNode }) {
       </header>
       <main>{children}</main>
       <footer className="site-footer">
-        <span>© {new Date().getFullYear()} {site.name}</span>
+        <span>
+          © {new Date().getFullYear()} {site.name}
+        </span>
       </footer>
     </div>
   );

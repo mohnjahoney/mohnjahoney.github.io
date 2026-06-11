@@ -1,36 +1,75 @@
 [
   {
-    "slug": "example-one",
-    "title": "Example One",
-    "description": "A short one-sentence description of the project.",
+    "slug": "runny",
+    "title": "runny",
+    "description": "A lightweight local development orchestrator for launching projects, tracking ports, and keeping dev servers visible.",
     "status": "active",
-    "categories": ["Useful Tools", "Data Science & Visualization"],
-    "thumbnail": "/projects/example-one/thumbnail.svg",
-    "links": [
-      { "label": "GitHub", "url": "https://github.com/yourhandle/example-one" }
-    ],
+    "categories": ["Useful Tools", "Developer Tools"],
+    "thumbnail": "projects/runny/thumbnail.svg",
+    "links": [{ "label": "GitHub", "url": "https://github.com/mohnjahoney/runny" }],
     "hasDetailPage": true
   },
   {
-    "slug": "example-two",
-    "title": "Example Two",
-    "description": "An experiment with a single screenshot and a short writeup.",
+    "slug": "pitch-hinter",
+    "title": "pitch-hinter",
+    "description": "A browser-based pitch-detection lab for exploring microphone input, algorithm confidence, and real-time musical feedback.",
     "status": "prototype",
-    "categories": ["Experimental / Artistic", "Music & Computation"],
-    "thumbnail": "/projects/example-two/thumbnail.svg",
+    "categories": ["Music & Computation", "Experimental / Artistic"],
+    "thumbnail": "projects/pitch-hinter/thumbnail.svg",
     "links": [],
     "hasDetailPage": true
   },
   {
-    "slug": "example-three",
-    "title": "Example Three",
-    "description": "A finished thing that links straight out to an external page.",
-    "status": "finished",
-    "categories": ["Silly / Weird"],
-    "thumbnail": "/projects/example-three/thumbnail.svg",
+    "slug": "small-website-builds",
+    "title": "Small Website Builds",
+    "description": "A group of calm, content-focused websites for musicians, performance projects, personal portfolios, and local organizations.",
+    "status": "active",
+    "categories": ["Useful Tools", "Experimental / Artistic"],
+    "thumbnail": "projects/small-website-builds/thumbnail.svg",
     "links": [
-      { "label": "Visit site", "url": "https://example.com" }
+      {
+        "label": "Professional musician site",
+        "url": "https://github.com/mohnjahoney/john-mahoney-jr-website"
+      },
+      {
+        "label": "Gordon Lightfoot Project",
+        "url": "https://github.com/mohnjahoney/gordon-lightfoot-project"
+      },
+      {
+        "label": "Zach Cowan site",
+        "url": "https://github.com/mohnjahoney/zach-cowan-educator-percussionist"
+      }
     ],
+    "hasDetailPage": true
+  },
+  {
+    "slug": "crack",
+    "title": "CRACK!",
+    "description": "Silly games for creative kids.",
+    "status": "prototype",
+    "categories": ["Games", "Web Development", "Silly / Weird" ],
+    "thumbnail": "projects/crack/puppet-example1.png",
+    "links": [{ "label": "GitHub", "url": "https://github.com/yourhandle/example-one" }],
+    "hasDetailPage": true
+  },
+  {
+    "slug": "soundingboard",
+    "title": "soundingboard",
+    "description": "A tool for capturing, annotating, and organizing musical ideas.",
+    "status": "prototype",
+    "categories": ["Music"],
+    "thumbnail": "projects/soundingboard/soundingboard.png",
+    "links": [],
+    "hasDetailPage": true
+  },
+  {
+    "slug": "design-trace",
+    "title": "design-trace",
+    "description": "Inspect a web element to learn *what* and *why*.",
+    "status": "prototype",
+    "categories": ["Utility"],
+    "thumbnail": "projects/design-trace/design-trace.png",
+    "links": [{ "label": "Visit site", "url": "https://example.com" }],
     "hasDetailPage": false
   }
 ]

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">Pitch Hinter</title>
+  <desc id="desc">A stylized pitch graph with musical note lanes and real-time signal traces.</desc>
+  <rect width="640" height="400" fill="#f3f1ea"/>
+  <rect x="58" y="58" width="524" height="284" rx="14" fill="#fbfaf7" stroke="#d8d4ca" stroke-width="3"/>
+  <text x="88" y="112" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="800" fill="#244a8f">pitch hinter</text>
+  <text x="88" y="142" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" fill="#706b63">microphone pitch lab</text>
+  <line x1="88" y1="190" x2="552" y2="190" stroke="#e4dfd5" stroke-width="2"/>
+  <line x1="88" y1="226" x2="552" y2="226" stroke="#e4dfd5" stroke-width="2"/>
+  <line x1="88" y1="262" x2="552" y2="262" stroke="#e4dfd5" stroke-width="2"/>
+  <line x1="88" y1="298" x2="552" y2="298" stroke="#e4dfd5" stroke-width="2"/>
+  <path d="M92 274 C128 220 164 244 196 202 C232 154 270 184 304 232 C342 284 374 286 410 236 C446 188 486 178 548 212" fill="none" stroke="#244a8f" stroke-width="8" stroke-linecap="round"/>
+  <path d="M92 282 C138 252 184 256 230 218 C276 180 320 214 366 250 C414 288 462 234 548 230" fill="none" stroke="#b85c38" stroke-width="5" stroke-linecap="round" stroke-dasharray="12 12"/>
+  <circle cx="196" cy="202" r="10" fill="#244a8f"/>
+  <circle cx="304" cy="232" r="10" fill="#244a8f"/>
+  <circle cx="410" cy="236" r="10" fill="#244a8f"/>
+  <rect x="438" y="98" width="84" height="26" rx="13" fill="#244a8f"/>
+  <text x="462" y="116" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="800" fill="#ffffff">A4</text>
+  <rect x="438" y="132" width="102" height="26" rx="13" fill="#efede7" stroke="#d8d4ca"/>
+  <text x="458" y="150" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="800" fill="#2d2b28">440 Hz</text>
+</svg>

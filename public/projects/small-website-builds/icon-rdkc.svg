@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">RKDC site icon</title>
+  <desc id="desc">A quilt-like grid of fabric shapes.</desc>
+  <rect width="96" height="96" rx="18" fill="#f3f1ea"/>
+  <rect x="20" y="20" width="56" height="56" rx="6" fill="#ffffff" stroke="#244a8f" stroke-width="4"/>
+  <path d="M24 24 H72 V72 H24 Z" fill="none" stroke="#244a8f" stroke-width="2"/>
+  <path d="M48 24 V72 M24 48 H72" stroke="#244a8f" stroke-width="3"/>
+  <path d="M24 24 L48 48 L24 72 Z" fill="#bdcce8"/>
+  <path d="M72 24 L48 48 L72 72 Z" fill="#244a8f"/>
+  <path d="M24 24 L48 48 L72 24 Z" fill="#efe3b1"/>
+  <path d="M24 72 L48 48 L72 72 Z" fill="#b85c38"/>
+</svg>

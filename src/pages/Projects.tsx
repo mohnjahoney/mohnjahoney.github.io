@@ -14,9 +14,7 @@ export default function Projects() {
     return Array.from(set).sort();
   }, []);
 
-  const filtered = active
-    ? projects.filter((p) => p.categories.includes(active))
-    : projects;
+  const filtered = active ? projects.filter((p) => p.categories.includes(active)) : projects;
 
   return (
     <>

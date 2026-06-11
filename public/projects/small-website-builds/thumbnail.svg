@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">Small Website Builds</title>
+  <desc id="desc">Three website mockups arranged like printed music posters.</desc>
+  <rect width="640" height="400" fill="#f3f1ea"/>
+  <rect x="70" y="82" width="170" height="238" rx="10" fill="#fbfaf7" stroke="#d8d4ca" stroke-width="3"/>
+  <rect x="236" y="54" width="184" height="292" rx="10" fill="#fbfaf7" stroke="#244a8f" stroke-width="4"/>
+  <rect x="408" y="92" width="162" height="218" rx="10" fill="#fbfaf7" stroke="#d8d4ca" stroke-width="3"/>
+  <rect x="94" y="112" width="122" height="72" rx="6" fill="#2d2b28"/>
+  <circle cx="155" cy="148" r="26" fill="#bdcce8"/>
+  <path d="M151 132 L151 168 M151 132 C174 128 174 145 151 148" fill="none" stroke="#244a8f" stroke-width="7" stroke-linecap="round"/>
+  <rect x="94" y="210" width="104" height="10" rx="5" fill="#244a8f"/>
+  <rect x="94" y="236" width="122" height="8" rx="4" fill="#9c988f"/>
+  <rect x="94" y="258" width="92" height="8" rx="4" fill="#c5c1b8"/>
+  <rect x="266" y="90" width="124" height="88" rx="6" fill="#efe3b1"/>
+  <path d="M286 150 C306 116 328 164 348 128 C360 108 374 112 388 132" fill="none" stroke="#244a8f" stroke-width="7" stroke-linecap="round"/>
+  <rect x="266" y="214" width="104" height="12" rx="6" fill="#244a8f"/>
+  <rect x="266" y="244" width="124" height="9" rx="4.5" fill="#9c988f"/>
+  <rect x="266" y="268" width="94" height="9" rx="4.5" fill="#c5c1b8"/>
+  <rect x="436" y="124" width="106" height="54" rx="6" fill="#244a8f"/>
+  <rect x="436" y="204" width="86" height="10" rx="5" fill="#244a8f"/>
+  <rect x="436" y="230" width="106" height="8" rx="4" fill="#9c988f"/>
+  <rect x="436" y="252" width="74" height="8" rx="4" fill="#c5c1b8"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">Interactive educational software</title>
+  <desc id="desc">Layered interface panels representing educational design work at Brilliant.</desc>
+  <rect width="640" height="400" fill="#f3f1ea"/>
+  <rect x="54" y="58" width="252" height="284" rx="14" fill="#ffffff" stroke="#d8d4ca" stroke-width="3"/>
+  <rect x="92" y="104" width="176" height="14" rx="7" fill="#2a6f6a"/>
+  <rect x="92" y="142" width="128" height="10" rx="5" fill="#9c988f"/>
+  <rect x="92" y="168" width="166" height="10" rx="5" fill="#c5c1b8"/>
+  <circle cx="150" cy="246" r="48" fill="#efe3b1" stroke="#d1b64f" stroke-width="3"/>
+  <path d="M150 199 L193 271 H107 Z" fill="none" stroke="#2a6f6a" stroke-width="8" stroke-linejoin="round"/>
+  <rect x="260" y="92" width="286" height="232" rx="16" fill="#ffffff" stroke="#d8d4ca" stroke-width="3"/>
+  <path d="M314 250 C348 176 390 212 422 160 C452 112 492 132 514 88" fill="none" stroke="#2a6f6a" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="314" cy="250" r="12" fill="#c86f4a"/>
+  <circle cx="422" cy="160" r="12" fill="#c86f4a"/>
+  <circle cx="514" cy="88" r="12" fill="#c86f4a"/>
+  <rect x="318" y="274" width="182" height="12" rx="6" fill="#c5c1b8"/>
+  <rect x="318" y="298" width="112" height="12" rx="6" fill="#9c988f"/>
+</svg>

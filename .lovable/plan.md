@@ -1,4 +1,3 @@
-
 ## Goal
 
 A small, calm, content-focused personal homepage. Project listings come from a JSON file; project detail pages come from Markdown files. Static build, deployable to GitHub Pages.

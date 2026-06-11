@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Personal portfolio icon</title>
+  <desc id="desc">A small browser window with project cards.</desc>
+  <rect width="96" height="96" rx="18" fill="#f3f1ea"/>
+  <rect x="18" y="20" width="60" height="52" rx="8" fill="#ffffff" stroke="#244a8f" stroke-width="4"/>
+  <rect x="26" y="32" width="24" height="6" rx="3" fill="#244a8f"/>
+  <rect x="26" y="46" width="44" height="4" rx="2" fill="#9c988f"/>
+  <rect x="26" y="58" width="18" height="8" rx="3" fill="#bdcce8"/>
+  <rect x="50" y="58" width="18" height="8" rx="3" fill="#bdcce8"/>
+</svg>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import type { CSSProperties } from "react";
 import { site } from "../content/site";
 import projectsData from "../content/projects.json";
 import type { Project } from "../content/types";
@@ -11,31 +12,30 @@ export default function Home() {
   return (
     <>
       <section className="intro">
-        <img src={site.photo} alt={site.name} className="avatar" />
-        <div>
+        <div className="intro-copy">
           <h1>{site.name}</h1>
           <p className="lede">{site.intro}</p>
           <p className="interests">{site.interests.join(" · ")}</p>
         </div>
+        <img
+          src={site.photo}
+          alt={site.name}
+          className={`avatar avatar-${site.photoShape}`}
+          style={{ "--avatar-size": site.photoSize } as CSSProperties}
+        />
       </section>
 
-      <section className="section">
-        <h2>Teaching</h2>
-        <p>
-          <a href={site.teachingUrl} target="_blank" rel="noreferrer">
-            Teaching portfolio →
+      <div className="feature-grid">
+        {site.featuredAreas.map((area) => (
+          <a key={area.title} href={area.url} target="_blank" rel="noreferrer" className="feature">
+            <img src={area.image} alt={area.imageAlt} className="feature-image" />
+            <div>
+              <h2>{area.title}</h2>
+              <p>{area.text}</p>
+            </div>
           </a>
-        </p>
-      </section>
-
-      <section className="section">
-        <h2>Research</h2>
-        <p>
-          <a href={site.researchUrl} target="_blank" rel="noreferrer">
-            Academic portfolio →
-          </a>
-        </p>
-      </section>
+        ))}
+      </div>
 
       <section className="section">
         <h2>Projects</h2>
