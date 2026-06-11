@@ -1,10 +1,9 @@
-design-trace is a tool that does more than expose the design attributes of a web element. It also helps us understand the *why*.
+`design-trace` is a developer tool for understanding why a rendered UI looks the way it does.
 
-## What it does
+It inspects elements in the browser and traces visual properties like color, typography, spacing, borders, and shadows through the CSS variables and design tokens that produced them.
 
-Like many existing tools, this accesses attributes through the DOM.
-In addition, integration with source code analysis allows the user to see the logical pathway that determines the current state.
+Instead of stopping at a computed value, `design-trace` shows the chain behind it: from the rendered property, through semantic and component tokens, down to the final browser value.
 
-This is an invaluable tool in navigating a complex design construction.
+It is an early MVP focused on runtime inspection and token tracing. Source-code mapping is planned, but not yet available.
 
 ![design-trace thumbnail](design-trace.png)
