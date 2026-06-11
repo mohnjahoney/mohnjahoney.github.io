@@ -31,3 +31,8 @@ Output goes to `dist/`. `base: './'` in `vite.config.ts` makes it work at any su
 This repo includes `.github/workflows/deploy.yml`. Push to `main`, then in repo Settings → Pages, set the source to "GitHub Actions".
 
 Routes use `HashRouter`, so deep links like `/#/projects/example-one` work without server-side rewrites.
+
+
+switching to more update-to-date site
+
+xxforce update
