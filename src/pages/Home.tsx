@@ -17,12 +17,18 @@ export default function Home() {
           <p className="lede">{site.intro}</p>
           <p className="interests">{site.interests.join(" · ")}</p>
         </div>
-        <img
-          src={site.photo}
-          alt={site.name}
-          className={`avatar avatar-${site.photoShape}`}
-          style={{ "--avatar-size": site.photoSize } as CSSProperties}
-        />
+        <div className="avatar-frame" style={{ "--avatar-size": site.photoSize } as CSSProperties}>
+          <img
+            src={site.photo}
+            alt={site.name}
+            className={`avatar avatar-default avatar-${site.photoShape}`}
+          />
+          <img
+            src="profile-photo-transparent-BLUE.png"
+            alt=""
+            className={`avatar avatar-hover avatar-${site.photoShape}`}
+          />
+        </div>
       </section>
 
       <div className="feature-grid">

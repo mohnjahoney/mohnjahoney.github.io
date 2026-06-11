@@ -1,6 +1,6 @@
 CRACK! is a suite of browser-based games that emphasize silliness, laughter, and creative use of technology.
 
-![CRACK!](title-screen.png)
+![CRACK!](screenshot.png)
 
 ## ThingamaPuppet
 

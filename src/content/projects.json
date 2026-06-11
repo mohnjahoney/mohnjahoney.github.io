@@ -48,7 +48,7 @@
     "description": "Silly games for creative kids.",
     "status": "prototype",
     "categories": ["Games", "Web Development", "Silly / Weird" ],
-    "thumbnail": "projects/crack/puppet-example1.png",
+    "thumbnail": "projects/crack/thumbnail.png",
     "links": [{ "label": "GitHub", "url": "https://github.com/yourhandle/example-one" }],
     "hasDetailPage": true
   },
@@ -70,6 +70,36 @@
     "categories": ["Utility"],
     "thumbnail": "projects/design-trace/design-trace.png",
     "links": [{ "label": "Visit site", "url": "https://example.com" }],
-    "hasDetailPage": false
+    "hasDetailPage": true
+  },
+  {
+    "slug": "oddio",
+    "title": "ODDiO",
+    "description": "Send a secret sonic text",
+    "status": "prototype",
+    "categories": ["Experimental / Artistic", "Music & Computation", "Silly / Weird"],
+    "thumbnail": "projects/oddio/thumbnail.png",
+    "links": [{ "label": "Visit site", "url": "https://example.com" }],
+    "hasDetailPage": true
+  },
+  {
+    "slug": "node-nav",
+    "title": "node-nav",
+    "description": "Explore dataset with interactive nodes",
+    "status": "prototype",
+    "categories": ["Web Development", "Useful Tools", "Experimental / Artistic"],
+    "thumbnail": "projects/node-nav/thumbnail.png",
+    "links": [{ "label": "Visit site", "url": "https://example.com" }],
+    "hasDetailPage": true
+  },
+  {
+    "slug": "simpsons-paradox",
+    "title": "simpsons-paradox",
+    "description": "Learn about Simpson's Paradox through an interactive lesson.",
+    "status": "prototype",
+    "categories": ["Education", "Web Development"],
+    "thumbnail": "projects/simpsons-paradox/thumbnail.png",
+    "links": [{ "label": "Visit site", "url": "https://example.com" }],
+    "hasDetailPage": true
   }
 ]
