@@ -3,11 +3,12 @@ export type PhotoShape = "circle" | "rounded" | "rect";
 
 export const site = {
   name: "John Mahoney",
-  photo: "profile-photo.png",
+  // photo: "profile-photo.png",
+  photo: "profile-photo-transparent.png",
   // Easy profile-photo controls:
   // shape can be "circle", "rounded", or "rect"; size accepts any CSS length.
   photoShape: "rounded" as PhotoShape,
-  photoSize: "200px",
+  photoSize: "220px",
   intro:
     "I build educational software, scientific tools, and interactive explanations. My work blends programming, visual design, interaction design, and a long-running interest in how people understand complex systems.",
   interests: [

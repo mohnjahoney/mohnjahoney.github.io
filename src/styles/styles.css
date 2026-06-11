@@ -159,12 +159,16 @@ h3 {
   width: var(--avatar-size, 112px);
   height: var(--avatar-size, 112px);
   object-fit: cover;
-  background: var(--border);
+  /* background: var(--border); */
+  /* background: #244a8f; */
+  background: transparent;
   flex-shrink: 0;
   /* Accent-tint grayscale portraits. Remove this filter for the original photo. */
-  filter: sepia(1) saturate(1.6) hue-rotate(176deg) contrast(1.08);
+  /* filter: sepia(1) saturate(1.6) hue-rotate(176deg) contrast(1.08); */
   /* Stronger flat-accent option: */
   /* filter: brightness(0) saturate(100%) invert(25%) sepia(68%) saturate(1055%) hue-rotate(193deg) brightness(91%) contrast(94%); */
+  /* border: 2px solid #c82929; */
+  /* border: 1px solid var(--accent); */
 }
 .avatar-circle {
   border-radius: 50%;
