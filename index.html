@@ -6,9 +6,28 @@
     <title>John Mahoney — Personal Homepage</title>
     <meta name="description" content="Personal homepage and portfolio." />
     <link rel="icon" href="data:," />
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
+    <script type="text/javascript">
+      window.addEventListener("load", function () {
+        if (window.Calendly) {
+          window.Calendly.initBadgeWidget({
+            url: "https://calendly.com/mohnjahoney",
+            text: "Schedule time with me",
+            color: "#0069ff",
+            textColor: "#ffffff",
+            branding: true,
+          });
+        }
+      });
+    </script>
   </body>
 </html>
