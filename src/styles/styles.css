@@ -440,24 +440,6 @@ h3 {
   gap: 1rem 1.5rem;
 }
 
-.cal-button {
-  padding: 0;
-  border: 0;
-  border-bottom: 1px solid currentColor;
-  background: transparent;
-  color: var(--accent);
-  font: inherit;
-  cursor: pointer;
-}
-.cal-button:hover {
-  color: var(--fg);
-}
-.cal-button:focus-visible {
-  border-radius: 2px;
-  outline: 2px solid var(--accent-soft);
-  outline-offset: 3px;
-}
-
 .crumbs {
   color: var(--muted);
   margin-bottom: 1rem;

@@ -62,7 +62,14 @@
             p(cal, ar);
           };
       })(window, "https://app.cal.com/embed/embed.js", "init");
-      Cal("init");
+      Cal("init", "mohnjahoney", { origin: "https://app.cal.com" });
+      Cal.ns["mohnjahoney"]("floatingButton", {
+        calLink: "mohnjahoney",
+        buttonText: "Try Cal.com",
+        buttonPosition: "bottom-left",
+        buttonColor: "#1c1c1e",
+        buttonTextColor: "#ffffff",
+      });
     </script>
   </body>
 </html>
