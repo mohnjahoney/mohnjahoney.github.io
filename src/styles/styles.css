@@ -77,11 +77,10 @@ a:hover {
   text-decoration: underline;
 }
 
-#cal-booking-button,
-.calendly-badge-widget .calendly-badge-content {
+#cal-booking-button {
   position: fixed;
   right: 20px;
-  bottom: 76px;
+  bottom: 20px;
   z-index: 9998;
   display: inline-flex;
   align-items: center;
@@ -101,18 +100,13 @@ a:hover {
   cursor: pointer;
   box-shadow: 0 2px 8px rgb(0 0 0 / 14%);
 }
-#cal-booking-button:hover,
-.calendly-badge-widget .calendly-badge-content:hover {
+#cal-booking-button:hover {
   background: #d89412 !important;
   text-decoration: none;
 }
-#cal-booking-button:focus-visible,
-.calendly-badge-widget .calendly-badge-content:focus-visible {
+#cal-booking-button:focus-visible {
   outline: 2px solid var(--accent-soft);
   outline-offset: 3px;
-}
-.calendly-badge-widget .calendly-badge-content {
-  bottom: 20px;
 }
 
 h1,
