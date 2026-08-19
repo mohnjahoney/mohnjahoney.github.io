@@ -236,9 +236,9 @@ h3 {
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  min-height: 2.45rem;
-  padding: 0.55rem 0.9rem;
-  border: 1px solid #eca71c;
+  min-height: 2.3rem;
+  padding: 0.48rem 0.82rem;
+  border: 1px solid #d9a52e;
   border-radius: 6px;
   font: inherit;
   font-size: 0.9rem;
@@ -250,21 +250,24 @@ h3 {
     border-color 0.15s;
 }
 .contact-schedule-button {
-  background: #eca71c;
-  color: #ffffff;
+  background: #fffdf6;
+  border-width: 2px;
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 .contact-schedule-button:hover {
-  background: #d89412;
-  border-color: #d89412;
+  background: #fff8e4;
+  border-color: #b88317;
 }
 .contact-email-button {
-  background: var(--card-bg);
-  color: #9a6a08;
+  background: #ffffff;
+  color: #4b4b4b;
 }
 .contact-email-button:hover {
   background: #fff7e6;
-  border-color: #d89412;
-  color: #7d5505;
+  border-color: #d9a52e;
+  color: #2f2f2f;
 }
 .contact-action:focus-visible {
   outline: 2px solid var(--accent-soft);

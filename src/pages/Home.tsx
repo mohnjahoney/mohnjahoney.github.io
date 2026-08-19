@@ -26,7 +26,7 @@ function CopyEmail({ email }: { email: string }) {
       title="Copy email address"
       aria-label={copied ? "Email copied" : `Copy ${email}`}
     >
-      {email}
+      {copied ? "Copied!" : email}
       <svg className="copy-email-icon" viewBox="0 0 16 16" aria-hidden="true">
         <rect x="5.5" y="2.5" width="8" height="8" rx="1" />
         <path d="M10.5 12.5v1h-7a1 1 0 0 1-1-1v-7h1" />
@@ -35,6 +35,22 @@ function CopyEmail({ email }: { email: string }) {
         {copied ? "Email copied" : ""}
       </span>
     </button>
+  );
+}
+
+function ContactActions({ email }: { email: string }) {
+  return (
+    <div className="contact-actions" aria-label="Contact options">
+      <button
+        type="button"
+        className="contact-action contact-schedule-button"
+        data-cal-link="mohnjahoney"
+        data-cal-config='{"theme":"light"}'
+      >
+        Find a time to talk
+      </button>
+      <CopyEmail email={email} />
+    </div>
   );
 }
 
@@ -49,17 +65,7 @@ export default function Home() {
             {site.intro} I’m always interested in feedback and conversations with curious people.
           </p>
           <p className="interests">{site.interests.join(" · ")}</p>
-          <div className="contact-actions" aria-label="Contact options">
-            <button
-              type="button"
-              className="contact-action contact-schedule-button"
-              data-cal-link="mohnjahoney"
-              data-cal-config='{"theme":"light"}'
-            >
-              Find a time to talk
-            </button>
-            <CopyEmail email={site.contact.email} />
-          </div>
+          <ContactActions email={site.contact.email} />
         </div>
         <div className="avatar-frame" style={{ "--avatar-size": site.photoSize } as CSSProperties}>
           <img
