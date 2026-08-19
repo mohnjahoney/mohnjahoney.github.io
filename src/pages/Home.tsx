@@ -325,6 +325,16 @@ export default function Home() {
               Resume (PDF)
             </a>
           </li>
+          <li>
+            <button
+              type="button"
+              className="cal-button"
+              data-cal-link="mohnjahoney"
+              data-cal-config='{"theme":"light"}'
+            >
+              Try Cal.com
+            </button>
+          </li>
         </ul>
       </section>
     </>
