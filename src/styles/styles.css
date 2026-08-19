@@ -77,38 +77,6 @@ a:hover {
   text-decoration: underline;
 }
 
-#cal-booking-button {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 9998;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: max-content;
-  min-height: 40px;
-  padding: 0 18px;
-  border: 0;
-  border-radius: 999px;
-  background: #eca71c !important;
-  color: #ffffff !important;
-  font-family: var(--sans) !important;
-  font-size: 14px !important;
-  font-weight: 600 !important;
-  line-height: 1;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 14%);
-}
-#cal-booking-button:hover {
-  background: #d89412 !important;
-  text-decoration: none;
-}
-#cal-booking-button:focus-visible {
-  outline: 2px solid var(--accent-soft);
-  outline-offset: 3px;
-}
-
 h1,
 h2,
 h3 {
@@ -231,66 +199,9 @@ h3 {
   margin: 0.35rem 0 0;
   max-width: 38rem;
 }
-.copy-email {
-  position: relative;
-  display: inline-block;
-  padding: 0 0.12em;
-  border: 0;
-  border-radius: 3px;
-  background: transparent;
-  color: var(--accent);
-  font: inherit;
-  line-height: inherit;
-  cursor: pointer;
-  vertical-align: baseline;
-  overflow: visible;
-}
-.copy-email:focus-visible {
-  outline: none;
-}
-.copy-email:focus-visible .copy-email-layer {
-  border-radius: 3px;
-  outline: 2px solid var(--accent-soft);
-  outline-offset: 2px;
-}
-.copy-email-stage {
-  position: relative;
-  display: inline-block;
-  white-space: nowrap;
-  perspective: 600px;
-}
-.copy-email-layer {
-  align-items: center;
-  gap: 0.3em;
-  white-space: nowrap;
-  transform-origin: center;
-  will-change: transform, opacity;
-}
-.copy-email-text {
-  display: inline-block;
-  font-kerning: none;
-  transform-style: preserve-3d;
-}
-.copy-email-char {
-  display: inline-block;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  will-change: transform, opacity;
-}
-.copy-email-prompt {
-  display: inline-flex;
-}
-.copy-email-address,
-.copy-email-confirmation {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: inline-flex;
-  opacity: 0;
-}
 .copy-email-icon {
-  width: 0.9em;
-  height: 0.9em;
+  width: 1em;
+  height: 1em;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
@@ -308,15 +219,56 @@ h3 {
   white-space: nowrap;
   border: 0;
 }
-@media (prefers-reduced-motion: reduce) {
-  .copy-email-layer {
-    will-change: auto;
-  }
-}
 .interests {
   color: var(--muted);
   font-size: 0.9rem;
   margin: 0.9rem 0 0;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+.contact-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 2.45rem;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid #eca71c;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    color 0.15s,
+    border-color 0.15s;
+}
+.contact-schedule-button {
+  background: #eca71c;
+  color: #ffffff;
+}
+.contact-schedule-button:hover {
+  background: #d89412;
+  border-color: #d89412;
+}
+.contact-email-button {
+  background: var(--card-bg);
+  color: #9a6a08;
+}
+.contact-email-button:hover {
+  background: #fff7e6;
+  border-color: #d89412;
+  color: #7d5505;
+}
+.contact-action:focus-visible {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 3px;
 }
 
 .section {
