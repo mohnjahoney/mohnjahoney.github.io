@@ -1,9 +1,6 @@
 import { useMemo, useState } from "react";
-import projectsData from "../content/projects.json";
-import type { Project } from "../content/types";
+import { projects } from "../content/projects/index";
 import ProjectCard from "../components/ProjectCard";
-
-const projects = projectsData as Project[];
 
 export default function Projects() {
   const [active, setActive] = useState<string | null>(null);

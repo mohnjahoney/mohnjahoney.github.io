@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import type { Project } from "../content/types";
+import type { ProjectDefinition } from "../content/defineProject";
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({ project }: { project: ProjectDefinition }) {
   const inner = (
     <>
       {project.thumbnail && (
@@ -11,7 +11,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       )}
       <div className="card-body">
         <h3>{project.title}</h3>
-        <p>{project.description}</p>
+        <p>{project.summary}</p>
         <div className="card-meta">
           <span className={`status status-${project.status}`}>{project.status}</span>
           {project.categories.slice(0, 2).map((c) => (
@@ -24,7 +24,7 @@ export default function ProjectCard({ project }: { project: Project }) {
     </>
   );
 
-  if (project.hasDetailPage) {
+  if (project.detail) {
     return (
       <Link to={`/projects/${project.slug}`} className="card">
         {inner}

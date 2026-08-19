@@ -199,6 +199,88 @@ h3 {
   margin: 0.35rem 0 0;
   max-width: 38rem;
 }
+.copy-email {
+  position: relative;
+  display: inline-block;
+  padding: 0 0.12em;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  vertical-align: baseline;
+  overflow: visible;
+}
+.copy-email:focus-visible {
+  outline: none;
+}
+.copy-email:focus-visible .copy-email-layer {
+  border-radius: 3px;
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 2px;
+}
+.copy-email-stage {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  perspective: 600px;
+}
+.copy-email-layer {
+  align-items: center;
+  gap: 0.3em;
+  white-space: nowrap;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+.copy-email-text {
+  display: inline-block;
+  font-kerning: none;
+  transform-style: preserve-3d;
+}
+.copy-email-char {
+  display: inline-block;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+.copy-email-prompt {
+  display: inline-flex;
+}
+.copy-email-address,
+.copy-email-confirmation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  opacity: 0;
+}
+.copy-email-icon {
+  width: 0.9em;
+  height: 0.9em;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.35;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .copy-email-layer {
+    will-change: auto;
+  }
+}
 .interests {
   color: var(--muted);
   font-size: 0.9rem;
@@ -380,6 +462,93 @@ h3 {
 .markdown {
   margin-top: 2rem;
 }
+.project-detail-content {
+  display: flow-root;
+  margin-top: 2rem;
+}
+.project-overview-copy .markdown {
+  margin-top: 0;
+}
+.conversation-starter {
+  position: relative;
+  float: right;
+  width: 270px;
+  margin: 0 0 1rem 2rem;
+  padding: 1rem 1.05rem 1.05rem;
+  border: 1px solid var(--accent-soft);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--accent-soft) 14%, var(--card-bg));
+}
+.conversation-starter::before {
+  content: "";
+  position: absolute;
+  top: 1.35rem;
+  left: -6px;
+  width: 10px;
+  height: 10px;
+  border-left: 1px solid var(--accent-soft);
+  border-bottom: 1px solid var(--accent-soft);
+  background: inherit;
+  transform: rotate(45deg);
+}
+.conversation-starter-icon {
+  width: 19px;
+  height: 19px;
+  margin-bottom: 0.45rem;
+  fill: none;
+  stroke: var(--accent);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+.conversation-starter h2 {
+  margin-bottom: 0.55rem;
+  color: var(--accent);
+  font-size: 1.05rem;
+}
+.conversation-starter p {
+  margin: 0;
+  color: var(--fg);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.conversation-audiences {
+  display: grid;
+  gap: 0.2rem;
+  margin: 0.75rem 0 0.85rem;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+.conversation-audiences li {
+  display: grid;
+  grid-template-columns: 0.6rem 1fr;
+  gap: 0.15rem;
+}
+.conversation-audiences li::before {
+  content: "·";
+  color: var(--accent-soft);
+}
+.conversation-cta {
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.conversation-cta:hover {
+  color: var(--fg);
+}
+.conversation-cta:focus-visible {
+  border-radius: 2px;
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 3px;
+}
 .markdown img {
   max-width: 100%;
   height: auto;
@@ -404,6 +573,60 @@ h3 {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.9em;
 }
+.markdown :not(pre) > code {
+  padding: 0.08em 0.3em;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: #f3f1ea;
+  color: var(--accent);
+}
+.markdown pre code {
+  font-size: inherit;
+}
+.markdown .hljs {
+  color: #30343b;
+}
+.markdown .hljs-comment,
+.markdown .hljs-quote {
+  color: #7a7e86;
+  font-style: italic;
+}
+.markdown .hljs-keyword,
+.markdown .hljs-selector-tag,
+.markdown .hljs-literal,
+.markdown .hljs-type {
+  color: #724b91;
+}
+.markdown .hljs-string,
+.markdown .hljs-regexp,
+.markdown .hljs-addition,
+.markdown .hljs-attribute {
+  color: #477052;
+}
+.markdown .hljs-title,
+.markdown .hljs-section,
+.markdown .hljs-function .hljs-title {
+  color: var(--accent);
+}
+.markdown .hljs-number,
+.markdown .hljs-symbol,
+.markdown .hljs-bullet,
+.markdown .hljs-built_in {
+  color: #9a592e;
+}
+.markdown .hljs-variable,
+.markdown .hljs-template-variable,
+.markdown .hljs-params {
+  color: #7c4964;
+}
+.markdown .hljs-meta,
+.markdown .hljs-selector-attr,
+.markdown .hljs-selector-pseudo {
+  color: #77732d;
+}
+.markdown .hljs-deletion {
+  color: #a33f3f;
+}
 .markdown blockquote {
   border-left: 3px solid var(--border);
   margin: 1rem 0;
@@ -421,5 +644,29 @@ h3 {
   }
   h1 {
     font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .project-detail-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-overview-copy {
+    order: 1;
+  }
+  .conversation-starter {
+    order: 2;
+    float: none;
+    width: auto;
+    margin: 1.25rem 0 0;
+  }
+  .project-detail-body {
+    order: 3;
+  }
+  .conversation-starter::before {
+    top: -6px;
+    left: 1.35rem;
+    transform: rotate(135deg);
   }
 }

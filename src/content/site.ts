@@ -10,15 +10,15 @@ export const site = {
   photoShape: "rounded" as PhotoShape,
   photoSize: "220px",
   intro:
-    "I build educational software, scientific tools, and interactive explanations. My work blends programming, visual design, interaction design, and a long-running interest in how people understand complex systems.",
+    "I build and explore things inspired by science, learning, software, music, games, and other curious corners of the world.",
+  // "I build educational software, scientific tools, and interactive explanations. My work blends programming, visual design, interaction design, and a long-running interest in how people understand complex systems.",
   interests: [
-    "Science",
-    "Educational software",
-    "Programming",
-    "Data visualization",
+    "Software",
+    "Physics",
+    "Education",
+    "Visualization",
+    "AI/ML",
     "Music",
-    "Creativity",
-    "Human experience",
   ],
   featuredAreas: [
     {
@@ -42,6 +42,10 @@ export const site = {
     },
   ],
   resumeUrl: "resume.pdf",
+  // Disable this to swap the contact text without animation.
+  contactAnimation: {
+    flip: true,
+  },
   contact: {
     email: "mohnjahoney@gmail.com",
     github: "https://github.com/mohnjahoney",
