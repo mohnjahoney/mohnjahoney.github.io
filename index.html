@@ -10,6 +10,14 @@
   </head>
   <body>
     <div id="root"></div>
+    <button
+      id="cal-booking-button"
+      type="button"
+      data-cal-link="mohnjahoney"
+      data-cal-config='{"theme":"light"}'
+    >
+      Chat with me - cal.com
+    </button>
     <script type="module" src="/src/main.tsx"></script>
     <script
       src="https://assets.calendly.com/assets/external/widget.js"
@@ -21,7 +29,7 @@
         if (window.Calendly) {
           window.Calendly.initBadgeWidget({
             url: "https://calendly.com/mohnjahoney",
-            text: "Schedule time with me",
+            text: "Chat with me - calendly",
             color: "#eca71c",
             textColor: "#ffffff",
             branding: true,
@@ -62,14 +70,7 @@
             p(cal, ar);
           };
       })(window, "https://app.cal.com/embed/embed.js", "init");
-      Cal("init", "mohnjahoney", { origin: "https://app.cal.com" });
-      Cal.ns["mohnjahoney"]("floatingButton", {
-        calLink: "mohnjahoney",
-        buttonText: "Schedule time with me",
-        buttonPosition: "bottom-left",
-        buttonColor: "#eca71c",
-        buttonTextColor: "#ffffff",
-      });
+      Cal("init");
     </script>
   </body>
 </html>
