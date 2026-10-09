@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="500" viewBox="0 0 600 500" role="img" aria-labelledby="title desc">
+  <title id="title">Hexagonal M wordmark study</title>
+  <desc id="desc">A cyan hexagon with a single, heavy, clipped off-white line forming an implied capital M.</desc>
+
+  <rect width="600" height="500" fill="#fffdf7"/>
+
+  <defs>
+    <clipPath id="hex-boundary">
+      <path d="M 180 85 H 420 L 520 250 L 420 415 H 180 L 80 250 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Site cyan: the underlying, flat-topped hexagon. -->
+  <path d="M 200 76.795 H 400 L 500 250 L 400 423.205 H 200 L 100 250 Z" fill="#0d9fd1"/>
+
+  <!-- One continuous path. Clipping keeps the 60px stroke entirely within the hexagon. -->
+  <path d="M 237.5277 401.5383 L 150.037 250 L 212.5093 141.795 L 293.3333 293.3333 L 387.4907 141.795 L 449.963 250 L 362.4723 401.5383 L 400 423.205 L 500 250 L 400 76.795 L 374.9813 76.795 L 300 206.667 L 225.0187 76.795 L 200 76.795 L 100 250 L 200 423.205 Z"
+        clip-path="url(#hex-boundary)"
+        fill="none"
+        stroke="#f7f5ef"
+        stroke-width="60"
+        stroke-linecap="butt"
+        stroke-linejoin="miter"
+        stroke-miterlimit="2"/>
+</svg>

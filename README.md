@@ -18,6 +18,25 @@ npm install
 npm run dev
 ```
 
+## Python experiments
+
+This repository also contains small Python experiments. The Python packages
+are declared in `pyproject.toml`; `uv` manages the environment automatically.
+Run the trajectory plot with:
+
+```bash
+uv sync
+uv run python particle-path-plot.py
+```
+
+For the animated version:
+
+```bash
+uv run python particle-path-plot.py --animate
+```
+
+You do not need to activate a virtual environment or remember package flags.
+
 ## Build
 
 ```bash

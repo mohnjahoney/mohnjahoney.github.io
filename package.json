@@ -4,6 +4,10 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
+    "generate:wordmark": "node --experimental-strip-types scripts/generate-m-hex-mark.ts",
+    "predev": "npm run generate:wordmark",
+    "prebuild": "npm run generate:wordmark",
+    "prebuild:dev": "npm run generate:wordmark",
     "dev": "vite dev",
     "build": "vite build",
     "build:dev": "vite build --mode development",

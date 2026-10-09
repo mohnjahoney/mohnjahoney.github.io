@@ -15,27 +15,34 @@ export default function Projects() {
 
   return (
     <>
-      <h1>Projects</h1>
-      <p className="lede">
-        Experiments, prototypes, and finished work. A mix of polished and unfinished things.
-      </p>
-      <div className="filters">
-        <button
-          className={active === null ? "filter active" : "filter"}
-          onClick={() => setActive(null)}
-        >
-          All
-        </button>
-        {tags.map((t) => (
-          <button
-            key={t}
-            className={active === t ? "filter active" : "filter"}
-            onClick={() => setActive(t)}
-          >
-            {t}
-          </button>
-        ))}
-      </div>
+      <section className="projects-hero">
+        <div className="projects-hero-copy">
+          <h1>Independent Software Work</h1>
+          <p className="lede">Tools, experiments, and finished work.</p>
+        </div>
+        <div className="projects-filter-panel">
+          <p className="projects-filter-label">Browse by focus</p>
+          <div className="filters" role="group" aria-label="Filter projects by focus">
+            <button
+              className={active === null ? "filter active" : "filter"}
+              aria-pressed={active === null}
+              onClick={() => setActive(null)}
+            >
+              All
+            </button>
+            {tags.map((t) => (
+              <button
+                key={t}
+                className={active === t ? "filter active" : "filter"}
+                aria-pressed={active === t}
+                onClick={() => setActive(t)}
+              >
+                {t}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
       <div className="card-grid">
         {filtered.map((p) => (
           <ProjectCard key={p.slug} project={p} />

@@ -1,0 +1,27 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 180 128"
+  role="img"
+  aria-labelledby="jm-mark-title"
+>
+  <title id="jm-mark-title">John Mahoney monogram</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bitter:wght@600&amp;display=swap");
+
+    .jm-mark-frame {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 3;
+    }
+
+    .jm-mark-letter {
+      fill: currentColor;
+      font-family: "Bitter", Georgia, serif;
+      font-weight: 600;
+    }
+  </style>
+
+  <ellipse class="jm-mark-frame" cx="90" cy="64" rx="79" ry="53" />
+  <text class="jm-mark-letter" x="43" y="80" font-size="72">K</text>
+  <text class="jm-mark-letter" x="78" y="92" font-size="100">M</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 128 128"
+  role="img"
+  aria-labelledby="m-hex-mark-title"
+>
+  <title id="m-hex-mark-title">Legacy M monogram</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bitter:wght@800&amp;display=swap");
+
+    .m-hex-mark__hex {
+      fill: var(--m-hex-fill, #0d9fd1);
+    }
+
+    .m-hex-mark__letter {
+      fill: var(--m-hex-letter, #f7f5ef);
+      font-family: "Bitter", Georgia, serif;
+      font-size: 78px;
+      font-weight: 800;
+      text-anchor: middle;
+    }
+  </style>
+
+  <path class="m-hex-mark__hex" d="M26 10h76l22 54-22 54H26L4 64 26 10Z" />
+  <text class="m-hex-mark__letter" x="64" y="91">M</text>
+</svg>

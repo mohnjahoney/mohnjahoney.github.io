@@ -1,0 +1,214 @@
+.music-page-shell {
+  --music-paper: #f5f0e7;
+  --music-ink: #28251f;
+  --music-muted: #696157;
+  --music-line: #d7cbb9;
+  --music-accent: #9c6a32;
+  --music-accent-deep: #6d4826;
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  padding: 1.5rem clamp(1.25rem, 5vw, 5rem) 3.5rem;
+  background: var(--music-paper);
+  color: var(--music-ink);
+}
+
+.music-page-shell .site-header {
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-bottom: clamp(3rem, 7vw, 6.5rem);
+  padding-bottom: 1.25rem;
+  border-bottom-color: var(--music-line);
+}
+
+.music-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  color: var(--music-ink);
+  font-family: var(--display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.music-brand-mark {
+  width: 2.5rem;
+  height: 2.25rem;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.music-page-shell .site-nav {
+  margin-left: auto;
+}
+
+.music-page-shell .site-nav a {
+  color: var(--music-muted);
+}
+
+.music-page-shell .site-nav a:hover,
+.music-page-shell .site-nav a.active {
+  color: var(--music-accent-deep);
+}
+
+.music-page-shell .site-footer {
+  max-width: 76rem;
+  margin: 4rem auto 0;
+  border-top-color: var(--music-line);
+  color: var(--music-muted);
+}
+
+.music-page {
+  width: min(76rem, 100%);
+  margin: 0 auto;
+}
+
+.music-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.72fr);
+  gap: clamp(2.5rem, 8vw, 8rem);
+  align-items: center;
+  margin-bottom: clamp(4.5rem, 10vw, 9rem);
+}
+
+.music-kicker {
+  margin: 0 0 1rem;
+  color: var(--music-accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.music-hero h1 {
+  margin: 0;
+  color: var(--music-ink);
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+
+.music-hero h1 {
+  max-width: 10ch;
+  font-size: clamp(2.8rem, 5.4vw, 5.2rem);
+}
+
+.music-intro {
+  max-width: 38rem;
+  margin: 2rem 0 0;
+  color: var(--music-muted);
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  line-height: 1.55;
+}
+
+.music-statement {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(18rem, 1.1fr);
+  gap: clamp(2.5rem, 8vw, 8rem);
+  margin-bottom: clamp(4.5rem, 10vw, 9rem);
+  padding: clamp(2rem, 5vw, 4rem) 0;
+  border-top: 1px solid var(--music-line);
+  border-bottom: 1px solid var(--music-line);
+}
+
+.music-statement h2 {
+  max-width: 14ch;
+  margin: 0;
+  color: var(--music-ink);
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 3.2vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.music-statement-copy p {
+  max-width: 28rem;
+  margin: 0 0 1.25rem;
+  color: var(--music-muted);
+  line-height: 1.6;
+}
+
+.music-hero-photo {
+  margin: 0;
+}
+
+.music-hero-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 43%;
+  border: 1px solid var(--music-line);
+  filter: saturate(0.88) contrast(0.98);
+}
+
+.music-hero-photo figcaption {
+  margin-top: 0.75rem;
+  color: var(--music-muted);
+  font-size: 0.8rem;
+}
+
+.music-contact-link {
+  display: inline-flex;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 0.75rem 0 0.6rem;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 2px solid currentColor;
+  background: transparent;
+  color: var(--music-accent-deep);
+  cursor: pointer;
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.music-contact-link:hover,
+.music-contact-link:focus-visible {
+  color: var(--music-accent);
+}
+
+.music-contact-link span {
+  transition: transform 160ms ease;
+}
+
+.music-contact-link:hover span,
+.music-contact-link:focus-visible span {
+  transform: translateX(0.3rem);
+}
+
+@media (max-width: 760px) {
+  .music-page-shell {
+    padding-top: 1rem;
+  }
+
+  .music-page-shell .site-header {
+    gap: 1rem;
+  }
+
+  .music-page-shell .site-nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .music-hero,
+  .music-statement {
+    grid-template-columns: 1fr;
+  }
+
+  .music-hero {
+    gap: 2.25rem;
+  }
+
+  .music-hero-photo {
+    max-width: 30rem;
+  }
+
+}

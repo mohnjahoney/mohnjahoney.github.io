@@ -94,7 +94,7 @@ export default function Home() {
       </div>
 
       <section className="section">
-        <h2>Projects</h2>
+        <h2>Independent Projects</h2>
         <div className="card-grid">
           {featured.map((p) => (
             <ProjectCard key={p.slug} project={p} />

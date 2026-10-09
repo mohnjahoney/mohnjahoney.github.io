@@ -1,0 +1,100 @@
+.mask-experiment-page {
+  min-height: 100vh;
+  max-width: none;
+  padding: 0;
+  background: #000;
+  color: #fff;
+}
+.mask-experiment-page > .site-header,
+.mask-experiment-page > .site-footer {
+  display: none;
+}
+.mask-experiment-page > main {
+  min-height: 100vh;
+}
+.mask-experiment {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+.mask-experiment-images {
+  display: grid;
+  width: 100%;
+  flex: 1;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  align-items: center;
+  margin: 0;
+}
+.mask-experiment figure {
+  display: flex;
+  min-width: 0;
+  min-height: 100%;
+  padding: clamp(1rem, 4vw, 3rem);
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+.mask-experiment-light-panel {
+  /* background: #fff; */
+  background: #ff8888;
+  color: #000;
+}
+.mask-experiment-dark-panel {
+  /* background: #000; */
+  background: #8888ff;
+  color: #fff;
+}
+.mask-experiment canvas {
+  display: block;
+  width: min(100%, 390px);
+  height: auto;
+  max-height: 68vh;
+  object-fit: contain;
+}
+.mask-experiment figcaption {
+  color: #777;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.mask-experiment-control {
+  width: 100%;
+  margin: 0;
+  padding: 1.25rem clamp(1rem, 4vw, 3rem) 1.5rem;
+  background: #000;
+}
+.mask-experiment-control label {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: #aaa;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.mask-experiment-control input {
+  width: 100%;
+  accent-color: #fff;
+  cursor: ew-resize;
+}
+.mask-experiment-scale {
+  display: flex;
+  justify-content: space-between;
+  color: #777;
+  font-size: 0.75rem;
+}
+.mask-experiment-scale output {
+  color: #aaa;
+}
+
+@media (max-width: 620px) {
+  .mask-experiment-images {
+    gap: 0.5rem;
+  }
+  .mask-experiment canvas {
+    max-height: 58vh;
+  }
+}
